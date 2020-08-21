@@ -1,0 +1,14 @@
+.design-content{
+  height: calc(100vh - 200px);
+  overflow:auto;
+  position: relative;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  color: white;
+  font-size: x-large;
+}
