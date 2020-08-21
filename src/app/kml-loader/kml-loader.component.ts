@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-model-repo',
-  templateUrl: './model-repo.component.html',
-  styleUrls: ['./model-repo.component.css']
+  selector: 'app-kml-loader',
+  templateUrl: './kml-loader.component.html',
+  styleUrls: ['./kml-loader.component.css']
 })
-export class ModelRepoComponent implements OnInit {
+export class KmlLoaderComponent implements OnInit {
 
 
   public devGitsJson: string;

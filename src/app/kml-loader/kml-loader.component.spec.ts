@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModelRepoComponent } from './model-repo.component';
+import { KmlLoaderComponent } from './kml-loader.component';
 
-describe('ModelRepoComponent', () => {
-  let component: ModelRepoComponent;
-  let fixture: ComponentFixture<ModelRepoComponent>;
+describe('KmlLoaderComponent', () => {
+  let component: KmlLoaderComponent;
+  let fixture: ComponentFixture<KmlLoaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModelRepoComponent ]
+      declarations: [ KmlLoaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModelRepoComponent);
+    fixture = TestBed.createComponent(KmlLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

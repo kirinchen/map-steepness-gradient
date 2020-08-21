@@ -8,9 +8,10 @@ import { FlowDesignComponent } from './flow-design/flow-design.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PropertiesComponent } from './flow-design/properties/properties.component';
-import { ModelRepoComponent } from './model-repo/model-repo.component';
+
 import { DesignComponent } from './header/design/design.component';
 import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu.component';
+import { KmlLoaderComponent } from './kml-loader/kml-loader.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu
     FlowDesignComponent,
     SidebarComponent,
     PropertiesComponent,
-    ModelRepoComponent,
+    KmlLoaderComponent,
     DesignComponent,
     ModelRepoMenuComponent,
 
