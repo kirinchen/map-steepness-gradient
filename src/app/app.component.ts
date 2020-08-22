@@ -8,6 +8,8 @@ import { UrlParamsService } from './service/url-params.service';
 })
 export class AppComponent implements OnInit {
   title = 'flow-editor';
+  power = 5;
+  factor = 1;
 
   constructor(
     public urlParams: UrlParamsService,
