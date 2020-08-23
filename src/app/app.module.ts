@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { DesignComponent } from './header/design/design.component';
 import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu.component';
 import { KmlLoadComponent } from './kml-load/kml-load.component';
+import { LocsComponent } from './locs/locs.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { KmlLoadComponent } from './kml-load/kml-load.component';
     DesignComponent,
     ModelRepoMenuComponent,
     KmlLoadComponent,
+    LocsComponent,
 
   ],
   imports: [

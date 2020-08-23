@@ -1,3 +1,4 @@
+import { CurPathsService } from './../service/cur-paths.service';
 import { LocInfo } from './../model/loc-info';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -8,24 +9,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./kml-load.component.css']
 })
 export class KmlLoadComponent implements OnInit {
-
-
-
+  public static KEY_LAST_DATA = 'last-kml';
   public kmlText: string;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private curPaths: CurPathsService
   ) { }
 
   async ngOnInit(): Promise<void> {
-
+    this.kmlText = sessionStorage.getItem(KmlLoadComponent.KEY_LAST_DATA);
   }
 
   public loadText(): void {
     const parser = new DOMParser();
     const xml = parser.parseFromString(this.kmlText, 'text/xml');
     const tags = xml.getElementsByTagName('coordinates');
-    this.parseLocs(tags);
+    const list = this.parseLocs(tags);
+    this.curPaths.setData(list);
+    sessionStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {
@@ -34,13 +36,20 @@ export class KmlLoadComponent implements OnInit {
     for (let j = 0; j < tags.length; j++) {
       const item = tags[j];
       const bundle = item.innerHTML;
-      const rows = bundle.split('\n\t');
-
-
+      const blist = this.parseLocsByRows(bundle);
+      ans = ans.concat(blist);
     }
+    return ans;
   }
 
-  private parseLocsByRows(b: string): void {
+  private parseLocsByRows(bundle: string): Array<LocInfo> {
+    const ans = new Array<LocInfo>();
+    const rows = bundle.split(',0');
+    for (const row of rows) {
+      const ls = row.split(',');
+      ans.push(new LocInfo(ls[1], ls[0]));
+    }
+    return ans;
 
   }
 
