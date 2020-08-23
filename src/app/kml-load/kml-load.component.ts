@@ -1,3 +1,4 @@
+import { GMapRestService } from './../service/gmap-rest.service';
 import { CurPathsService } from './../service/cur-paths.service';
 import { LocInfo } from './../model/loc-info';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class KmlLoadComponent implements OnInit {
   public static KEY_LAST_DATA = 'last-kml';
+
   public kmlText: string;
+  public gmapApiKey: string;
 
   constructor(
     private router: Router,
@@ -19,6 +22,7 @@ export class KmlLoadComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.kmlText = sessionStorage.getItem(KmlLoadComponent.KEY_LAST_DATA);
+    this.gmapApiKey = sessionStorage.getItem(GMapRestService.KEY_GMAP_KEY);
   }
 
   public loadText(): void {
@@ -28,6 +32,7 @@ export class KmlLoadComponent implements OnInit {
     const list = this.parseLocs(tags);
     this.curPaths.setData(list);
     sessionStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
+    sessionStorage.setItem(GMapRestService.KEY_GMAP_KEY, this.gmapApiKey);
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {
