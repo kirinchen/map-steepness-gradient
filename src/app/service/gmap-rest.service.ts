@@ -1,5 +1,5 @@
 import { LocInfo } from './../model/loc-info';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Path } from '../model/path';
 declare var jquery: any;
@@ -38,16 +38,14 @@ export class GMapRestService {
     const key = sessionStorage.getItem(GMapRestService.KEY_GMAP_KEY);
     const link = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&waypoints=' + waypoints + '&mode=' + mode + '&destination=' + destination + '&key=' + key;
 
-    $.ajax({
-      url: 'https://whattomine.com/coins.json',
-      type: 'GET',
-      async: false,
 
-      success: function (ta) {
-        console.log(ta);
-      }
 
+
+    this.httpClient.get<object>(link).subscribe(res => {
+      console.log(JSON.stringify(res));
     });
+
+
 
   }
 

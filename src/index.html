@@ -47,27 +47,6 @@
   mermaid.mermaidAPI.initialize({
     startOnLoad: false
   });
-  var fbURL = "https://whattomine.com/coins.json";
-
-  $.ajax({
-    url: fbURL,
-    type: 'GET',
-    // headers: {
-    //   "accept": "application/json",
-    //   "Access-Control-Allow-Origin": "*"
-    // },
-    // crossDomain: true,
-    contentType: 'application/json',
-    dataType: "jsonp",
-    success: function (resp) {
-      alert(resp);
-    },
-    error: function (e) {
-      alert('Error: ' + JSON.stringify( e));
-    }
-  });
-
-
 
 </script>
 
