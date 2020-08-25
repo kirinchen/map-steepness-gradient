@@ -1,3 +1,5 @@
+import { MapComponent } from './map/map.component';
+import { ConfigGaurdService } from './service/config-gaurd.service';
 import { ConfigComponent } from './config/config.component';
 import { LocsComponent } from './locs/locs.component';
 import { NgModule } from '@angular/core';
@@ -8,10 +10,11 @@ import { KmlLoadComponent } from './kml-load/kml-load.component';
 
 // https://www.techiediaries.com/angular-router-multiple-outlets/ NOT WORK
 const routes: Routes = [
-  { path: '', component: KmlLoadComponent },
-  { path: 'load', component: KmlLoadComponent },
-  { path: 'locs', component: LocsComponent },
-  { path: 'config', component: ConfigComponent },
+  { path: '', component: KmlLoadComponent, canActivate: [ConfigGaurdService] },
+  { path: 'load', component: KmlLoadComponent, canActivate: [ConfigGaurdService] },
+  { path: 'locs', component: LocsComponent, canActivate: [ConfigGaurdService] },
+  { path: 'map', component: MapComponent, canActivate: [ConfigGaurdService] },
+  { path: 'config', component: ConfigComponent, },
 ];
 
 @NgModule({

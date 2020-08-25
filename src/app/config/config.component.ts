@@ -1,3 +1,4 @@
+import { ToastInfo, ToastService } from './../service/toast.service';
 import { ConfigService } from './../service/config.service';
 import { Component, OnInit } from '@angular/core';
 import { GMapRestService } from '../service/gmap-rest.service';
@@ -12,7 +13,8 @@ export class ConfigComponent implements OnInit {
   public gmapApiKey: string;
 
   constructor(
-    private config: ConfigService
+    private config: ConfigService,
+    private toast: ToastService
   ) { }
 
   ngOnInit(): void {
@@ -20,6 +22,10 @@ export class ConfigComponent implements OnInit {
   }
 
   public save(): void {
+    this.toast.twinkle({
+      msg: 'it`s done',
+      title: 'OK'
+    });
     this.config.saveGmapKey(this.gmapApiKey);
   }
 

@@ -13,6 +13,7 @@ import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu
 import { KmlLoadComponent } from './kml-load/kml-load.component';
 import { LocsComponent } from './locs/locs.component';
 import { ConfigComponent } from './config/config.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ConfigComponent } from './config/config.component';
     KmlLoadComponent,
     LocsComponent,
     ConfigComponent,
+    MapComponent,
 
   ],
   imports: [

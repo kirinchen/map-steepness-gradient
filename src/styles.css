@@ -1,1 +1,17 @@
 @import url(https://unpkg.com/bootstrap@4.5.0/dist/css/bootstrap.min.css);
+
+#toast-container {
+  -webkit-box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  -moz-box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  background-color: #26a35698;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}

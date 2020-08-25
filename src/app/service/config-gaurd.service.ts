@@ -14,7 +14,7 @@ export class ConfigGaurdService implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    if (this.config.existGmapkey) {
+    if (this.config.existGmapkey()) {
       return true;
     }
 

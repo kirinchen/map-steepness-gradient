@@ -24,6 +24,27 @@
 </head>
 
 <body>
+
+
+  <div aria-live="polite" id="toast-container" aria-atomic="true"
+    class="d-flex justify-content-center align-items-center overlay"
+    style="z-index: 1070; min-height: 200px;top: -9000px;">
+
+    <!-- Then put toasts within -->
+    <div class="toast p-1" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+      <div class="toast-header">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <h3 class="m-1"><strong class="mr-auto">Bootstrap</strong></h3>
+        <small> &nbsp; </small>
+      </div>
+      <h1 class="m-3">
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </h1>
+    </div>
+  </div>
+
   <app-root></app-root>
 
 </body>
@@ -31,6 +52,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
   integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
   crossorigin="anonymous"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<!-- <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeL56HladQBJF5CqnhyEjVBZ4WsO9N5io&callback=initMap&libraries=&v=weekly"
+  defer></script> -->
+<script src="../assets/js/gmap-rekey.js"></script>
+<script src="../assets/js/mapapp.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
