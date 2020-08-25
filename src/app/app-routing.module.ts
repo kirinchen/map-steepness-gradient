@@ -1,3 +1,4 @@
+import { ConfigComponent } from './config/config.component';
 import { LocsComponent } from './locs/locs.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: '', component: KmlLoadComponent },
   { path: 'load', component: KmlLoadComponent },
   { path: 'locs', component: LocsComponent },
+  { path: 'config', component: ConfigComponent },
 ];
 
 @NgModule({

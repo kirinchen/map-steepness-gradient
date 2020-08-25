@@ -23,7 +23,6 @@ declare let $: any;
   providedIn: 'root'
 })
 export class GMapRestService {
-  public static KEY_GMAP_KEY = 'gmap-api-key';
 
   constructor(
     private httpClient: HttpClient,
@@ -51,7 +50,7 @@ export class GMapRestService {
     const waypoints = this.genWaypointsPram(points);
     const mode = 'bicycling';
     const destination = points[points.length - 1].getPointPram();
-    const key = sessionStorage.getItem(GMapRestService.KEY_GMAP_KEY);
+    const key = ''; // sessionStorage.getItem(GMapRestService.KEY_GMAP_KEY);
     const link = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&waypoints=' + waypoints + '&mode=' + mode + '&destination=' + destination + '&key=' + key;
 
 

@@ -12,6 +12,7 @@ import { DesignComponent } from './header/design/design.component';
 import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu.component';
 import { KmlLoadComponent } from './kml-load/kml-load.component';
 import { LocsComponent } from './locs/locs.component';
+import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LocsComponent } from './locs/locs.component';
     ModelRepoMenuComponent,
     KmlLoadComponent,
     LocsComponent,
+    ConfigComponent,
 
   ],
   imports: [
