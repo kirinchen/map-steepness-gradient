@@ -28,9 +28,11 @@ import { LocsComponent } from './locs/locs.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientJsonpModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

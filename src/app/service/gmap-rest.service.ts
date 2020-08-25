@@ -1,7 +1,21 @@
 import { LocInfo } from './../model/loc-info';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import {
+  HttpClientJsonpModule,
+  HttpClientModule,
+  HttpClient,
+  HttpHeaders,
+
+} from '@angular/common/http';
+import {
+  map,
+  debounceTime,
+  distinctUntilChanged,
+  switchMap,
+  tap
+} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Path } from '../model/path';
+import { Observable } from 'rxjs';
 declare var jquery: any;
 declare let $: any;
 
@@ -10,8 +24,9 @@ declare let $: any;
 })
 export class GMapRestService {
   public static KEY_GMAP_KEY = 'gmap-api-key';
+
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
   ) { }
 
   public injectElevation(locs: Array<LocInfo>): void {
@@ -25,12 +40,13 @@ export class GMapRestService {
     const spLocs = this.splitWaypoints(locs);
     const ans: Array<Path> = [];
     for (const blocs of spLocs) {
-      await this.fetchPathFromGmap(blocs);
+      const bd = await this.fetchPathFromGmap(blocs).toPromise();
+      console.log(bd);
     }
     return ans;
   }
 
-  private fetchPathFromGmap(points: Array<LocInfo>): void {
+  private fetchPathFromGmap(points: Array<LocInfo>): Observable<object> {
     const origin = points[0].getPointPram();
     const waypoints = this.genWaypointsPram(points);
     const mode = 'bicycling';
@@ -39,14 +55,20 @@ export class GMapRestService {
     const link = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&waypoints=' + waypoints + '&mode=' + mode + '&destination=' + destination + '&key=' + key;
 
 
-
-
-    this.httpClient.get<object>(link).subscribe(res => {
-      console.log(JSON.stringify(res));
-    });
+    // return this.httpClient.jsonp<object>(link, 'callback');
+    return this.getData();
 
 
 
+
+  }
+
+  getData(): Observable<object> {
+    const url = 'https://whattomine.com/coins.json';
+
+    // Pass the key for your callback (in this case 'callback')
+    // as the second argument to the jsonp method
+    return this.httpClient.jsonp<object>(url, 'callback');
   }
 
   private genWaypointsPram(points: Array<LocInfo>): string {
@@ -63,15 +85,16 @@ export class GMapRestService {
     ans.push([]);
     let arIdx = 0;
     for (let i = 1; i < points.length - 1; i++) {
+      if (ans.length > 3) {
+        break;
+      }
       const oary = ans[arIdx];
       oary.push(points[i]);
       if (oary.length >= 10) {
         arIdx++;
         ans.push([]);
       }
-      if (ans.length > 3) {
-        break;
-      }
+
     }
     return ans;
   }
