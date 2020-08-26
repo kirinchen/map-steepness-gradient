@@ -1,31 +1,29 @@
 import { LocInfo } from './../model/loc-info';
-import {
-  HttpClientJsonpModule,
-  HttpClientModule,
-  HttpClient,
-  HttpHeaders,
 
-} from '@angular/common/http';
 import {
   map,
   debounceTime,
   distinctUntilChanged,
   switchMap,
-  tap
+  tap,
+  retry
 } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Path } from '../model/path';
 import { Observable } from 'rxjs';
 declare var jquery: any;
 declare let $: any;
+declare let google: any;
 
 @Injectable({
   providedIn: 'root'
 })
 export class GMapRestService {
 
+  // directionsService = new google.maps.DirectionsService();
+
   constructor(
-    private httpClient: HttpClient,
+
   ) { }
 
   public injectElevation(locs: Array<LocInfo>): void {
@@ -39,48 +37,60 @@ export class GMapRestService {
     const spLocs = this.splitWaypoints(locs);
     const ans: Array<Path> = [];
     for (const blocs of spLocs) {
-      const bd = await this.fetchPathFromGmap(blocs).toPromise();
+      if (blocs.length <= 0) { continue; }
+      const bd = await this.fetchPathFromGmap(blocs);
       console.log(bd);
     }
     return ans;
   }
 
-  private fetchPathFromGmap(points: Array<LocInfo>): Observable<object> {
-    const origin = points[0].getPointPram();
+  private parsePaths(bd: any): Array<Path> {
+    const legs: [] = bd.routes[0].legs;
+    for (const leg of legs) {
+
+    }
+  }
+
+  private fetchPathFromGmap(points: Array<LocInfo>): Promise<any> {
+
+    const origin = points[0].getLatLng();
     const waypoints = this.genWaypointsPram(points);
-    const mode = 'bicycling';
-    const destination = points[points.length - 1].getPointPram();
-    const key = ''; // sessionStorage.getItem(GMapRestService.KEY_GMAP_KEY);
-    const link = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&waypoints=' + waypoints + '&mode=' + mode + '&destination=' + destination + '&key=' + key;
+    const mode = 'BICYCLING';
+    const destination = points[points.length - 1].getLatLng();
+    // const link = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&waypoints=' + waypoints + '&mode=' + mode + '&destination=' + destination + '&key=' + key;
 
-
-    // return this.httpClient.jsonp<object>(link, 'callback');
-    return this.getData();
-
-
-
+    const request = {
+      origin,
+      destination,
+      travelMode: mode,
+      waypoints
+    };
+    return new Promise((rev, rej) => {
+      const directionsService = new google.maps.DirectionsService();
+      directionsService.route(request, (response, status) => {
+        if (status === 'OK') {
+          rev(response);
+        } else {
+          rej(response);
+        }
+      });
+    });
 
   }
 
-  getData(): Observable<object> {
-    const url = 'https://whattomine.com/coins.json';
 
-    // Pass the key for your callback (in this case 'callback')
-    // as the second argument to the jsonp method
-    return this.httpClient.jsonp<object>(url, 'callback');
-  }
 
-  private genWaypointsPram(points: Array<LocInfo>): string {
-    let ans = '';
+
+  private genWaypointsPram(points: Array<LocInfo>): Array<Waypoint> {
+    const ans = new Array<Waypoint>();
     for (let i = 1; i < points.length - 1; i++) {
-      const sp = i === 1 ? '' : ' | ';
-      ans += sp + points[i].getPointPram();
+      ans.push(points[i].getWaypoint());
     }
     return ans;
   }
 
   private splitWaypoints(points: Array<LocInfo>): Array<Array<LocInfo>> {
-    const ans = [];
+    let ans = new Array<Array<LocInfo>>();
     ans.push([]);
     let arIdx = 0;
     for (let i = 1; i < points.length - 1; i++) {
@@ -89,13 +99,20 @@ export class GMapRestService {
       }
       const oary = ans[arIdx];
       oary.push(points[i]);
-      if (oary.length >= 10) {
+      if (oary.length >= 25) {
         arIdx++;
         ans.push([]);
       }
 
     }
+
     return ans;
   }
 
+}
+
+
+export class Waypoint {
+  location: any;
+  stopover: boolean;
 }

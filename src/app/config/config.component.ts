@@ -21,12 +21,13 @@ export class ConfigComponent implements OnInit {
     this.gmapApiKey = this.config.loadGmapKey();
   }
 
-  public save(): void {
-    this.toast.twinkle({
+  public async save(): Promise<void> {
+    await this.toast.twinkle({
       msg: 'it`s done',
       title: 'OK'
     });
     this.config.saveGmapKey(this.gmapApiKey);
+    location.reload();
   }
 
 }

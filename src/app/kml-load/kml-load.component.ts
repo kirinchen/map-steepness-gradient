@@ -21,7 +21,7 @@ export class KmlLoadComponent implements OnInit {
   ) { }
 
   async ngOnInit(): Promise<void> {
-    this.kmlText = sessionStorage.getItem(KmlLoadComponent.KEY_LAST_DATA);
+    this.kmlText = localStorage.getItem(KmlLoadComponent.KEY_LAST_DATA);
 
   }
 
@@ -31,7 +31,7 @@ export class KmlLoadComponent implements OnInit {
     const tags = xml.getElementsByTagName('coordinates');
     const list = this.parseLocs(tags);
     this.curPaths.setData(list);
-    sessionStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
+    localStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {

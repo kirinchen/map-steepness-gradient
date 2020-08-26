@@ -11,11 +11,11 @@ export class ConfigService {
   constructor() { }
 
   public saveGmapKey(k: string): void {
-    sessionStorage.setItem(ConfigService.KEY_GMAP_KEY, k);
+    localStorage.setItem(ConfigService.KEY_GMAP_KEY, k);
   }
 
   public loadGmapKey(): string {
-    return sessionStorage.getItem(ConfigService.KEY_GMAP_KEY);
+    return localStorage.getItem(ConfigService.KEY_GMAP_KEY);
   }
 
   public existGmapkey(): boolean {
