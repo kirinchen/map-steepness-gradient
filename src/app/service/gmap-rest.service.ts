@@ -47,7 +47,13 @@ export class GMapRestService {
       // ans.paths = ans.paths.concat(ps);
       // await TimeUtils.delay(700);
 
-      await this.fetchPath(ans, blocs);
+      try {
+        await this.fetchPath(ans, blocs);
+      } catch (ex) {
+        await TimeUtils.delay(7000);
+        await this.fetchPath(ans, blocs);
+      }
+
     }
     return ans;
   }

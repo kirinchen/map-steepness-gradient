@@ -28,16 +28,17 @@ export class KmlLoadComponent implements OnInit {
   }
 
   public async loadText(): Promise<void> {
+    this.toast.show({
+      msg: 'done',
+      title: 'OK'
+    });
     const parser = new DOMParser();
     const xml = parser.parseFromString(this.kmlText, 'text/xml');
     const tags = xml.getElementsByTagName('coordinates');
     const list = this.parseLocs(tags);
     await this.curPaths.setData(list);
     localStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
-    this.toast.twinkle({
-      msg: 'done',
-      title: 'OK'
-    });
+
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {
