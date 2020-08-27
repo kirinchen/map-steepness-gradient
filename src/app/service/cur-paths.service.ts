@@ -1,4 +1,4 @@
-import { GMapRestService } from './gmap-rest.service';
+import { GMapRestService, PathBundle } from './gmap-rest.service';
 import { LocInfo } from './../model/loc-info';
 import { Path } from './../model/path';
 import { Injectable } from '@angular/core';
@@ -8,29 +8,18 @@ import { Injectable } from '@angular/core';
 })
 export class CurPathsService {
 
-
-  public paths: Array<Path> = [];
+  public static KEY_LAST_DATA = 'last-data';
+  public pathsInfo = new PathBundle();
   constructor(
     private gmapRestService: GMapRestService
-  ) { }
+  ) {
+    const ls = localStorage.getItem(CurPathsService.KEY_LAST_DATA);
+    this.pathsInfo = JSON.parse(ls);
+  }
 
   public async setData(list: LocInfo[]): Promise<void> {
-    this.gmapRestService.fetchPaths(list);
-    //to fix by loc height https://script.google.com/a/domiearth.com/d/1tyavcD24L1zPm1vPa6BwmWK0tIE7iHz3h5a39fxa--k3jXae-30cxT9Y/edit?mid=ACjPJvGwQ6vtQLWyVhAn-Y1FCthdS0msnPVhe_OuRF2aLHwhYJRlrezYIh_pSiCMCVg5N6HJ7jKAaG9pd5ECoJsABhQ7I_n_N6rMwrZ9QO-oyGGNT5GdfzIeILSGNGyr8E54TK32PCxjKQ&uiv=2
-    // let cp = new Path();
-    // for (const l of list) {
-    //   if (!cp.start) {
-    //     cp.setStart(l);
-    //   } else if (!cp.end) {
-    //     cp.setEnd(l);
-    //   } else {
-    //     throw new Error('not posible');
-    //   }
-    //   if (cp.isComplete()) {
-    //     this.paths.push(cp);
-    //     cp = new Path();
-    //   }
-    // }
+    this.pathsInfo = await this.gmapRestService.fetchPaths(list);
+    localStorage.setItem(CurPathsService.KEY_LAST_DATA, JSON.stringify(this.pathsInfo));
   }
 
 

@@ -1,3 +1,4 @@
+import { Path } from './../model/path';
 import { CurPathsService } from './../service/cur-paths.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,6 +14,10 @@ export class LocsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  public getPaths(): Array<Path> {
+    return this.curPaths.pathsInfo.paths;
   }
 
 }

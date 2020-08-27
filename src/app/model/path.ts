@@ -2,6 +2,7 @@ import { LocInfo } from './loc-info';
 export class Path {
   public start: LocInfo;
   public end: LocInfo;
+  public distance: number;
 
   public setStart(s: LocInfo): void {
     this.start = s;
@@ -9,6 +10,10 @@ export class Path {
 
   public setEnd(e: LocInfo): void {
     this.end = e;
+  }
+
+  public setDistance(d: number): void {
+    this.distance = d;
   }
 
   public isComplete(): boolean {

@@ -33,22 +33,37 @@ export class GMapRestService {
     }
   }
 
-  public async fetchPaths(locs: Array<LocInfo>): Promise<Array<Path>> {
+  public async fetchPaths(locs: Array<LocInfo>): Promise<PathBundle> {
     const spLocs = this.splitWaypoints(locs);
-    const ans: Array<Path> = [];
+    const ans = new PathBundle();
     for (const blocs of spLocs) {
       if (blocs.length <= 0) { continue; }
       const bd = await this.fetchPathFromGmap(blocs);
-      console.log(bd);
+      ans.response.push(bd);
+      const ps = this.parsePaths(bd);
+      ans.paths = ans.paths.concat(ps);
     }
     return ans;
   }
 
-  private parsePaths(bd: any): Array<Path> {
-    const legs: [] = bd.routes[0].legs;
-    for (const leg of legs) {
+  // private https://developers.google.com/maps/documentation/javascript/elevation
 
+
+  private parsePaths(bd: any): Array<Path> {
+    const ans = new Array<Path>();
+    const legs: any[] = bd.routes[0].legs;
+    for (const leg of legs) {
+      console.log(leg);
+      const p = new Path();
+      const stl = leg.start_location;
+      const edl = leg.end_location;
+      p.setStart(new LocInfo(stl.lat(), stl.lng()));
+      p.setEnd(new LocInfo(edl.lat(), edl.lng()));
+      p.setDistance(leg.distance.value);
+      console.log(p);
+      ans.push(p);
     }
+    return ans;
   }
 
   private fetchPathFromGmap(points: Array<LocInfo>): Promise<any> {
@@ -109,6 +124,11 @@ export class GMapRestService {
     return ans;
   }
 
+}
+
+export class PathBundle {
+  public paths: Array<Path> = new Array<Path>();
+  public response: Array<any> = Array<any>();
 }
 
 
