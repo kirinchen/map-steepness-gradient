@@ -2,6 +2,7 @@ import { GMapRestService, PathBundle } from './gmap-rest.service';
 import { LocInfo } from './../model/loc-info';
 import { Path } from './../model/path';
 import { Injectable } from '@angular/core';
+import { plainToClass } from 'class-transformer';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class CurPathsService {
     private gmapRestService: GMapRestService
   ) {
     const ls = localStorage.getItem(CurPathsService.KEY_LAST_DATA);
-    this.pathsInfo = JSON.parse(ls);
+    const ino = JSON.parse(ls);
+    this.pathsInfo = plainToClass(PathBundle, ino);
+    console.log(this.pathsInfo);
   }
 
   public async setData(list: LocInfo[]): Promise<void> {

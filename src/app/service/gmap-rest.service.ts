@@ -11,6 +11,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Path } from '../model/path';
 import { Observable } from 'rxjs';
+import { Type } from 'class-transformer';
 declare var jquery: any;
 declare let $: any;
 declare let google: any;
@@ -41,26 +42,54 @@ export class GMapRestService {
       const bd = await this.fetchPathFromGmap(blocs);
       ans.response.push(bd);
       const ps = this.parsePaths(bd);
+      this.setupElevation(ps);
       ans.paths = ans.paths.concat(ps);
     }
     return ans;
   }
 
-  // private https://developers.google.com/maps/documentation/javascript/elevation
+  //  https://developers.google.com/maps/documentation/javascript/elevation
+
+  private setupElevation(ps: Array<Path>): void {
+    const elevator = new google.maps.ElevationService();
+    const locations = new Array<any>();
+    for (const p of ps) {
+      locations.push(p.start.getLatLng());
+      locations.push(p.end.getLatLng());
+    }
+
+    elevator.getElevationForLocations({
+      locations
+    }, (results: Array<any>, status) => {
+      console.log(results);
+      let pi = 0;
+      for (const r of results) {
+        const curP: Path = ps[pi];
+        if (!curP.start.isCompleteElevation()) {
+          curP.start.elevation = r.elevation;
+        } else if (!curP.end.isCompleteElevation()) {
+          curP.end.elevation = r.elevation;
+        } else {
+          pi++;
+        }
+
+      }
+    });
+  }
 
 
   private parsePaths(bd: any): Array<Path> {
     const ans = new Array<Path>();
     const legs: any[] = bd.routes[0].legs;
     for (const leg of legs) {
-      console.log(leg);
+      // console.log(leg);
       const p = new Path();
       const stl = leg.start_location;
       const edl = leg.end_location;
       p.setStart(new LocInfo(stl.lat(), stl.lng()));
       p.setEnd(new LocInfo(edl.lat(), edl.lng()));
       p.setDistance(leg.distance.value);
-      console.log(p);
+      // console.log(p);
       ans.push(p);
     }
     return ans;
@@ -127,6 +156,8 @@ export class GMapRestService {
 }
 
 export class PathBundle {
+
+  @Type(() => Path)
   public paths: Array<Path> = new Array<Path>();
   public response: Array<any> = Array<any>();
 }

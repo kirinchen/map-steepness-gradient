@@ -5,14 +5,16 @@
       <th scope="col">Start</th>
       <th scope="col">End</th>
       <th scope="col">Dinstance</th>
+      <th scope="col">Height</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let p of getPaths(); let i = index">
       <th scope="row">{{ i }}</th>
-      <td>{{p.start.latitude}} &nbsp; {{p.start.longitude}}</td>
-      <td>{{p.end.latitude}} &nbsp; {{p.end.longitude}}</td>
+      <td>{{p.start.latitude}} &nbsp; {{p.start.longitude}} H:{{p.start.elevation}}</td>
+      <td>{{p.end.latitude}} &nbsp; {{p.end.longitude}} H:{{p.end.elevation}}</td>
       <td>{{p.distance}}</td>
+      <td>{{p.getDifHeight()}} ( {{ p.getSteepness() }} )</td>
     </tr>
   </tbody>
 </table>
