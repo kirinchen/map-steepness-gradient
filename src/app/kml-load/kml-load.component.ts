@@ -1,3 +1,4 @@
+import { ToastService } from './../service/toast.service';
 import { GMapRestService } from './../service/gmap-rest.service';
 import { CurPathsService } from './../service/cur-paths.service';
 import { LocInfo } from './../model/loc-info';
@@ -17,7 +18,8 @@ export class KmlLoadComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private curPaths: CurPathsService
+    private curPaths: CurPathsService,
+    private toast: ToastService
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -25,13 +27,17 @@ export class KmlLoadComponent implements OnInit {
 
   }
 
-  public loadText(): void {
+  public async loadText(): Promise<void> {
     const parser = new DOMParser();
     const xml = parser.parseFromString(this.kmlText, 'text/xml');
     const tags = xml.getElementsByTagName('coordinates');
     const list = this.parseLocs(tags);
-    this.curPaths.setData(list);
+    await this.curPaths.setData(list);
     localStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
+    this.toast.twinkle({
+      msg: 'done',
+      title: 'OK'
+    });
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {

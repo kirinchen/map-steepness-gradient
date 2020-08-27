@@ -1,3 +1,4 @@
+import { TimeUtils } from './../utils/time-utils';
 import { LocInfo } from './../model/loc-info';
 
 import {
@@ -38,15 +39,29 @@ export class GMapRestService {
     const spLocs = this.splitWaypoints(locs);
     const ans = new PathBundle();
     for (const blocs of spLocs) {
-      if (blocs.length <= 0) { continue; }
-      const bd = await this.fetchPathFromGmap(blocs);
-      ans.response.push(bd);
-      const ps = this.parsePaths(bd);
-      this.setupElevation(ps);
-      ans.paths = ans.paths.concat(ps);
+      // if (blocs.length <= 0) { continue; }
+      // const bd = await this.fetchPathFromGmap(blocs);
+      // ans.response.push(bd);
+      // const ps = this.parsePaths(bd);
+      // this.setupElevation(ps);
+      // ans.paths = ans.paths.concat(ps);
+      // await TimeUtils.delay(700);
+
+      await this.fetchPath(ans, blocs);
     }
     return ans;
   }
+
+  private async fetchPath(ans: PathBundle, blocs: LocInfo[]): Promise<void> {
+    if (blocs.length <= 0) { return; }
+    const bd = await this.fetchPathFromGmap(blocs);
+    ans.response.push(bd);
+    const ps = this.parsePaths(bd);
+    this.setupElevation(ps);
+    ans.paths = ans.paths.concat(ps);
+    await TimeUtils.delay(100);
+  }
+
 
   //  https://developers.google.com/maps/documentation/javascript/elevation
 
@@ -138,9 +153,9 @@ export class GMapRestService {
     ans.push([]);
     let arIdx = 0;
     for (let i = 1; i < points.length - 1; i++) {
-      if (ans.length > 3) {
-        break;
-      }
+      // if (ans.length > 3) {
+      //   break;
+      // }
       const oary = ans[arIdx];
       oary.push(points[i]);
       if (oary.length >= 25) {
