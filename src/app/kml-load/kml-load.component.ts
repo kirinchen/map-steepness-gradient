@@ -1,3 +1,5 @@
+import { TimeUtils } from './../utils/time-utils';
+import { ProgressDialogService } from './../service/progress-dialog.service';
 import { ToastService } from './../service/toast.service';
 import { GMapRestService } from './../service/gmap-rest.service';
 import { CurPathsService } from './../service/cur-paths.service';
@@ -19,7 +21,8 @@ export class KmlLoadComponent implements OnInit {
   constructor(
     private router: Router,
     private curPaths: CurPathsService,
-    private toast: ToastService
+    private toast: ToastService,
+    private progressDialog: ProgressDialogService
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -28,17 +31,27 @@ export class KmlLoadComponent implements OnInit {
   }
 
   public async loadText(): Promise<void> {
-    this.toast.show({
-      msg: 'done',
-      title: 'OK'
-    });
     const parser = new DOMParser();
     const xml = parser.parseFromString(this.kmlText, 'text/xml');
     const tags = xml.getElementsByTagName('coordinates');
     const list = this.parseLocs(tags);
-    await this.curPaths.setData(list);
+    await this.curPaths.setData(list, size => this.progressDialog.show(0, size), idx => {
+      this.progressDialog.setCurValue(idx);
+    });
     localStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
+    this.progressDialog.dismiss();
+    this.toast.twinkle({
+      msg: 'OK',
+      title: 'done'
+    });
+  }
 
+  public async testPb(): Promise<void> {
+    this.progressDialog.show(0, 700);
+    for (let i = 0; i < 700; i++) {
+      this.progressDialog.setCurValue(i);
+      await TimeUtils.delay(50);
+    }
   }
 
   private parseLocs(tags: HTMLCollectionOf<Element>): Array<LocInfo> {

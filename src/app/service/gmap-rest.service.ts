@@ -35,17 +35,12 @@ export class GMapRestService {
     }
   }
 
-  public async fetchPaths(locs: Array<LocInfo>): Promise<PathBundle> {
+  public async fetchPaths(locs: Array<LocInfo>, initCb: (size: number) => void, curCb: (i: number) => void): Promise<PathBundle> {
     const spLocs = this.splitWaypoints(locs);
+    initCb(spLocs.length);
+    let idx = 0;
     const ans = new PathBundle();
     for (const blocs of spLocs) {
-      // if (blocs.length <= 0) { continue; }
-      // const bd = await this.fetchPathFromGmap(blocs);
-      // ans.response.push(bd);
-      // const ps = this.parsePaths(bd);
-      // this.setupElevation(ps);
-      // ans.paths = ans.paths.concat(ps);
-      // await TimeUtils.delay(700);
 
       try {
         await this.fetchPath(ans, blocs);
@@ -57,7 +52,7 @@ export class GMapRestService {
           console.log(exx);
         }
       }
-
+      curCb(idx++);
     }
     return ans;
   }
@@ -88,14 +83,17 @@ export class GMapRestService {
     }, (results: Array<any>, status) => {
       console.log(results);
       let pi = 0;
+      let curP: Path = ps[pi];
       for (const r of results) {
-        const curP: Path = ps[pi];
+        if (curP.isCompleteElevation()) {
+          curP = ps[++pi];
+        }
         if (!curP.start.isCompleteElevation()) {
           curP.start.elevation = r.elevation;
         } else if (!curP.end.isCompleteElevation()) {
           curP.end.elevation = r.elevation;
-        } else {
-          pi++;
+        }else{
+          throw new Error('all comp');
         }
 
       }

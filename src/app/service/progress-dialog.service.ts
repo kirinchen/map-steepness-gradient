@@ -7,21 +7,21 @@ declare let $: any;
 })
 export class ProgressDialogService {
 
-  private token: number;
 
   constructor() { }
 
-  public show(min: number, max: number): number {
-    this.token = Math.floor((Math.random() * 1000000) + 1);
+  public show(min: number, max: number): void {
     const pb = ProgressBundle.load();
     pb.setMinMax(min, max);
     pb.setCurrent(0);
     pb.show();
-    return this.token;
   }
 
-  public dismiss(to: number): void {
-    if (to !== this.token) { return; }
+  public setCurValue(v: number): void {
+    ProgressBundle.load().setCurrent(v);
+  }
+
+  public dismiss(): void {
     ProgressBundle.load().dismiss();
   }
 
@@ -54,12 +54,17 @@ class ProgressBundle {
   }
 
   setMinMax(min: number, max: number): void {
-    this.progressbar.data('aria-valuemin', min);
-    this.progressbar.data('aria-valuemax', max);
+    this.progressbar.attr('aria-valuemin', min);
+    this.progressbar.attr('aria-valuemax', max);
   }
 
   setCurrent(c: number): void {
-    this.progressbar.data('aria-valuenow', c);
+    const min = parseInt(this.progressbar.attr('aria-valuemin'));
+    const max = parseInt(this.progressbar.attr('aria-valuemax'));
+    const d = max - min;
+    const r = (c / d) * 100;
+    this.progressbar.css('width', r + '%');
+    this.progressbar.attr('aria-valuenow', c);
   }
 
   show(): void {

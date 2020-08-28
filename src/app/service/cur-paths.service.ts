@@ -20,8 +20,8 @@ export class CurPathsService {
     console.log(this.pathsInfo);
   }
 
-  public async setData(list: LocInfo[]): Promise<void> {
-    this.pathsInfo = await this.gmapRestService.fetchPaths(list);
+  public async setData(list: LocInfo[], initCb: (size: number) => void, curCb: (i: number) => void): Promise<void> {
+    this.pathsInfo = await this.gmapRestService.fetchPaths(list, initCb, curCb);
     localStorage.setItem(CurPathsService.KEY_LAST_DATA, JSON.stringify(this.pathsInfo));
   }
 
