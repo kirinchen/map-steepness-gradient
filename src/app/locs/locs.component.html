@@ -15,7 +15,7 @@
         <td>{{p.start.latitude}} &nbsp; {{p.start.longitude}} H:{{p.start.elevation  | number : '1.2-2'}}</td>
         <td>{{p.end.latitude}} &nbsp; {{p.end.longitude}} H:{{p.end.elevation  | number : '1.2-2'}}</td>
         <td>{{p.distance  | number : '1.2-2' }}</td>
-        <td>{{p.getDifHeight()  | number : '1.2-2'}} ( {{ p.getSteepness()  | number : '1.2-2' }} )</td>
+        <td>{{p.getDifHeight()  | number : '1.2-2'}} ( {{ p.getAngleDeg()  | number : '1.2-2' }} )</td>
       </tr>
     </tbody>
   </table>

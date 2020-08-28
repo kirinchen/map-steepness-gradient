@@ -46,4 +46,10 @@ export class Path {
     return this.getDifHeight() / this.distance;
   }
 
+  public getAngleDeg(): number {
+    const angleRad = Math.atan(this.getSteepness());
+    const angleDeg = angleRad * 180 / Math.PI;
+    return (angleDeg);
+  }
+
 }

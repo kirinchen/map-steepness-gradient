@@ -51,7 +51,11 @@ export class GMapRestService {
         await this.fetchPath(ans, blocs);
       } catch (ex) {
         await TimeUtils.delay(7000);
-        await this.fetchPath(ans, blocs);
+        try {
+          await this.fetchPath(ans, blocs);
+        } catch (exx) {
+          console.log(exx);
+        }
       }
 
     }
