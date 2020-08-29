@@ -14,6 +14,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col">Selct</th>
         <th scope="col">Start</th>
         <th scope="col">End</th>
         <th scope="col">Dinstance</th>
@@ -23,6 +24,7 @@
     <tbody>
       <tr *ngFor="let p of getPaths(); let i = index">
         <th scope="row">{{ i }}</th>
+        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
         <td>{{p.start.latitude}} &nbsp; {{p.start.longitude}} H:{{p.start.elevation  | number : '1.2-2'}}</td>
         <td>{{p.end.latitude}} &nbsp; {{p.end.longitude}} H:{{p.end.elevation  | number : '1.2-2'}}</td>
         <td>{{p.distance  | number : '1.2-2' }}</td>
@@ -30,4 +32,9 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Select Query</button>
+  <button type="button" class="btn btn-secondary">Un Select ALL</button>
+  <button type="button" class="btn btn-secondary">Draw In Map</button>
 </div>
