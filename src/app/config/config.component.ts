@@ -11,6 +11,7 @@ import { GMapRestService } from '../service/gmap-rest.service';
 export class ConfigComponent implements OnInit {
 
   public gmapApiKey: string;
+  public minPathDist: number;
 
   constructor(
     private config: ConfigService,
@@ -19,6 +20,7 @@ export class ConfigComponent implements OnInit {
 
   ngOnInit(): void {
     this.gmapApiKey = this.config.loadGmapKey();
+    this.minPathDist = this.config.loadPathMinDist(15);
   }
 
   public async save(): Promise<void> {
@@ -27,6 +29,7 @@ export class ConfigComponent implements OnInit {
       title: 'OK'
     });
     this.config.saveGmapKey(this.gmapApiKey);
+    this.config.savePathMinDist(this.minPathDist);
     location.reload();
   }
 

@@ -13,6 +13,7 @@ import { Injectable } from '@angular/core';
 import { Path } from '../model/path';
 import { Observable } from 'rxjs';
 import { Type } from 'class-transformer';
+import { ConfigService } from './config.service';
 declare var jquery: any;
 declare let $: any;
 declare let google: any;
@@ -22,11 +23,14 @@ declare let google: any;
 })
 export class GMapRestService {
 
+
   private minPathDistance = 15;
 
   constructor(
-
-  ) { }
+    private config: ConfigService
+  ) {
+    this.minPathDistance = config.loadPathMinDist(this.minPathDistance);
+  }
 
   public injectElevation(locs: Array<LocInfo>): void {
     const spLocs = this.splitWaypoints(locs);
@@ -104,16 +108,25 @@ export class GMapRestService {
   private parsePaths(bd: any): Array<Path> {
     const ans = new Array<Path>();
     const legs: any[] = bd.routes[0].legs;
-    for (const leg of legs) {
+    let p = new Path();
+    let dist = 0;
+    for (let i = 0; i < legs.length; i++) {
+      const leg = legs[i];
       // console.log(leg);
-      const p = new Path();
       const stl = leg.start_location;
       const edl = leg.end_location;
-      p.setStart(new LocInfo(stl.lat(), stl.lng()));
-      p.setEnd(new LocInfo(edl.lat(), edl.lng()));
-      p.setDistance(leg.distance.value);
+      if (!p.start) {
+        p.setStart(new LocInfo(stl.lat(), stl.lng()));
+      }
+      dist += leg.distance.value;
+      if (dist >= this.minPathDistance || i === (legs.length - 1)) {
+        p.setEnd(new LocInfo(edl.lat(), edl.lng()));
+        p.setDistance(dist);
+        ans.push(p);
+        dist = 0;
+        p = new Path();
+      }
       // console.log(p);
-      ans.push(p);
     }
     return ans;
   }
@@ -157,7 +170,7 @@ export class GMapRestService {
   }
 
   private splitWaypoints(points: Array<LocInfo>): Array<Array<LocInfo>> {
-    let ans = new Array<Array<LocInfo>>();
+    const ans = new Array<Array<LocInfo>>();
     ans.push([]);
     let arIdx = 0;
     for (let i = 1; i < points.length - 1; i++) {

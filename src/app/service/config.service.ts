@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConfigService {
-
+  public static KEY_MIN_PATH_DIST = 'min-path-distance';
   public static KEY_GMAP_KEY = 'gmap-api-key';
 
   constructor() { }
@@ -21,6 +21,21 @@ export class ConfigService {
   public existGmapkey(): boolean {
     return !StringUtils.isBlank(this.loadGmapKey());
   }
+
+  public savePathMinDist(v: number): void {
+    localStorage.setItem(ConfigService.KEY_MIN_PATH_DIST, v + '');
+  }
+
+  public loadPathMinDist(dv: number): number {
+    const vs = localStorage.getItem(ConfigService.KEY_MIN_PATH_DIST);
+    if (StringUtils.isBlank(vs)) { return dv; }
+    const lv = parseFloat(vs);
+    if (lv > 3) { return lv; }
+    return dv;
+  }
+
+
+
 
 
 
