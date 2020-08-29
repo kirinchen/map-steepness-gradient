@@ -14,6 +14,8 @@ import { KmlLoadComponent } from './kml-load/kml-load.component';
 import { LocsComponent } from './locs/locs.component';
 import { ConfigComponent } from './config/config.component';
 import { MapComponent } from './map/map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MapComponent } from './map/map.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true }

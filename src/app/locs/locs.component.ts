@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocsComponent implements OnInit {
 
+  public steepnessFilter = 0;
+
   constructor(
     public curPaths: CurPathsService
   ) { }
@@ -17,7 +19,8 @@ export class LocsComponent implements OnInit {
   }
 
   public getPaths(): Array<Path> {
-    return this.curPaths.pathsInfo.paths;
+    const list = this.curPaths.pathsInfo.paths;
+    return list.filter(p => p.getAngleDeg() >= this.steepnessFilter);
   }
 
 }

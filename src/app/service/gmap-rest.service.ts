@@ -22,7 +22,7 @@ declare let google: any;
 })
 export class GMapRestService {
 
-  // directionsService = new google.maps.DirectionsService();
+  private minPathDistance = 15;
 
   constructor(
 
@@ -92,7 +92,7 @@ export class GMapRestService {
           curP.start.elevation = r.elevation;
         } else if (!curP.end.isCompleteElevation()) {
           curP.end.elevation = r.elevation;
-        }else{
+        } else {
           throw new Error('all comp');
         }
 
