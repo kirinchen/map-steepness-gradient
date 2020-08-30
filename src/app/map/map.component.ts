@@ -17,13 +17,14 @@ export class MapComponent implements OnInit {
 
   mode = DrawMode.NONE;
   DrawMode = DrawMode;
+  map: any;
   constructor(
     private curPaths: CurPathsService
   ) { }
 
   async ngOnInit(): Promise<void> {
     await CommUtils.delay(1000);
-    const map = await new google.maps.Map(document.getElementById('map'), {
+    this.map = await new google.maps.Map(document.getElementById('map'), {
       center: { lat: -34.397, lng: 150.644 },
       zoom: 8
     });
@@ -52,6 +53,7 @@ export class MapComponent implements OnInit {
 
   private drawPaths(): void {
     const directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(this.map);
     this.curPaths.pathsInfo.response.forEach(r => {
       directionsRenderer.setDirections(r);
     });
