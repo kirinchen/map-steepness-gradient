@@ -1,2 +1,6 @@
-
-<div id="map" ></div>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.ALL_PATH)">Draw All Path</button>
+  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.SELECTED)">Draw Select Path</button>
+  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.NONE)">Clear</button>
+</div>
+<div id="map"></div>

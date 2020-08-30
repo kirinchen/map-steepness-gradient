@@ -8,6 +8,7 @@ export class Path {
   @Type(() => LocInfo)
   public end: LocInfo;
   public distance: number;
+  public selected: boolean;
 
   public setStart(s: LocInfo): void {
     this.start = s;

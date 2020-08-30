@@ -23,4 +23,13 @@ export class LocsComponent implements OnInit {
     return list.filter(p => p.getAngleDeg() >= this.steepnessFilter);
   }
 
+  public selectByQuery(): void {
+    const ps = this.getPaths();
+    ps.forEach(p => p.selected = true);
+  }
+
+  public unSelectAll(): void {
+    this.curPaths.pathsInfo.paths.forEach(p => p.selected = false);
+  }
+
 }
