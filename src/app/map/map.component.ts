@@ -2,6 +2,7 @@ import { CurPathsService } from './../service/cur-paths.service';
 import { CommUtils } from './../comm-utils';
 import { Component, OnInit } from '@angular/core';
 import { retry } from 'rxjs/operators';
+import * as renData from '../../assets/json/test-ren.json';
 
 declare var jquery: any;
 declare let $: any;
@@ -55,8 +56,16 @@ export class MapComponent implements OnInit {
     const directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(this.map);
     this.curPaths.pathsInfo.response.forEach(r => {
+      console.log(JSON.stringify(r));
       directionsRenderer.setDirections(r);
     });
+  }
+
+  public drawTest(): void {
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(this.map);
+    const j = JSON.stringify(renData);
+    directionsRenderer.setDirections(JSON.parse(j).default);
   }
 
 }

@@ -1,0 +1,2182 @@
+{
+  "routes": [
+    {
+      "bounds": {
+        "south": 25.031760000000002,
+        "west": 121.66266000000002,
+        "north": 25.03263,
+        "east": 121.66445000000002
+      },
+      "copyrights": "Map data ©2020 Google",
+      "legs": [
+        {
+          "distance": {
+            "text": "3 公尺",
+            "value": 3
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0324538,
+            "lng": 121.6626864
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0324362,
+            "lng": 121.6626636
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "3 公尺",
+                "value": 3
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0324538,
+                "lng": 121.6626864
+              },
+              "polyline": {
+                "points": "wcxwCsfqeVAE"
+              },
+              "start_location": {
+                "lat": 25.0324362,
+                "lng": 121.6626636
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "wcxwCsfqeVAE",
+              "path": [
+                {
+                  "lat": 25.03244,
+                  "lng": 121.66266000000002
+                },
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66269000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03244,
+                  "lng": 121.66266000000002
+                },
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66269000000001
+                }
+              ],
+              "instructions": "往<b>東北</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324362,
+                "lng": 121.6626636
+              },
+              "end_point": {
+                "lat": 25.0324538,
+                "lng": 121.6626864
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "8 公尺",
+            "value": 8
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 3
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0325086,
+            "lng": 121.6627416
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0324538,
+            "lng": 121.6626864
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "8 公尺",
+                "value": 8
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 3
+              },
+              "end_location": {
+                "lat": 25.0325086,
+                "lng": 121.6627416
+              },
+              "polyline": {
+                "points": "ycxwCyfqeVKI"
+              },
+              "start_location": {
+                "lat": 25.0324538,
+                "lng": 121.6626864
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "ycxwCyfqeVKI",
+              "path": [
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66269000000001
+                },
+                {
+                  "lat": 25.032510000000002,
+                  "lng": 121.66274000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66269000000001
+                },
+                {
+                  "lat": 25.032510000000002,
+                  "lng": 121.66274000000001
+                }
+              ],
+              "instructions": "往<b>東北</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324538,
+                "lng": 121.6626864
+              },
+              "end_point": {
+                "lat": 25.0325086,
+                "lng": 121.6627416
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "15 公尺",
+            "value": 15
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 5
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0325985,
+            "lng": 121.6628508
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0325087,
+            "lng": 121.6627417
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "15 公尺",
+                "value": 15
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 5
+              },
+              "end_location": {
+                "lat": 25.0325985,
+                "lng": 121.6628508
+              },
+              "polyline": {
+                "points": "edxwCcgqeVGIAACCCE"
+              },
+              "start_location": {
+                "lat": 25.0325087,
+                "lng": 121.6627417
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "edxwCcgqeVGIAACCCE",
+              "path": [
+                {
+                  "lat": 25.032510000000002,
+                  "lng": 121.66274000000001
+                },
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66279000000002
+                },
+                {
+                  "lat": 25.032560000000004,
+                  "lng": 121.6628
+                },
+                {
+                  "lat": 25.032580000000003,
+                  "lng": 121.66282000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66285
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032510000000002,
+                  "lng": 121.66274000000001
+                },
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66279000000002
+                },
+                {
+                  "lat": 25.032560000000004,
+                  "lng": 121.6628
+                },
+                {
+                  "lat": 25.032580000000003,
+                  "lng": 121.66282000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66285
+                }
+              ],
+              "instructions": "往<b>東北</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325087,
+                "lng": 121.6627417
+              },
+              "end_point": {
+                "lat": 25.0325985,
+                "lng": 121.6628508
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "3 公尺",
+            "value": 3
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0326109,
+            "lng": 121.6628796
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0325985,
+            "lng": 121.6628508
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "3 公尺",
+                "value": 3
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0326109,
+                "lng": 121.6628796
+              },
+              "polyline": {
+                "points": "wdxwCygqeVAE"
+              },
+              "start_location": {
+                "lat": 25.0325985,
+                "lng": 121.6628508
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "wdxwCygqeVAE",
+              "path": [
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66285
+                },
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66288000000002
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66285
+                },
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66288000000002
+                }
+              ],
+              "instructions": "往<b>東北</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325985,
+                "lng": 121.6628508
+              },
+              "end_point": {
+                "lat": 25.0326109,
+                "lng": 121.6628796
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "1 公尺",
+            "value": 1
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 0
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0326153,
+            "lng": 121.662892
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0326109,
+            "lng": 121.6628796
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "1 公尺",
+                "value": 1
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 0
+              },
+              "end_location": {
+                "lat": 25.0326153,
+                "lng": 121.662892
+              },
+              "polyline": {
+                "points": "ydxwC_hqeVAA"
+              },
+              "start_location": {
+                "lat": 25.0326109,
+                "lng": 121.6628796
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "ydxwC_hqeVAA",
+              "path": [
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66288000000002
+                },
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66289
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66288000000002
+                },
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66289
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0326109,
+                "lng": 121.6628796
+              },
+              "end_point": {
+                "lat": 25.0326153,
+                "lng": 121.662892
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "2 公尺",
+            "value": 2
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0326214,
+            "lng": 121.6629094
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0326153,
+            "lng": 121.662892
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "2 公尺",
+                "value": 2
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0326214,
+                "lng": 121.6629094
+              },
+              "polyline": {
+                "points": "{dxwCahqeV?C"
+              },
+              "start_location": {
+                "lat": 25.0326153,
+                "lng": 121.662892
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "{dxwCahqeV?C",
+              "path": [
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66289
+                },
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66291000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66289
+                },
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66291000000001
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0326153,
+                "lng": 121.662892
+              },
+              "end_point": {
+                "lat": 25.0326214,
+                "lng": 121.6629094
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "2 公尺",
+            "value": 2
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.0326262,
+            "lng": 121.6629306
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0326214,
+            "lng": 121.6629094
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "2 公尺",
+                "value": 2
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0326262,
+                "lng": 121.6629306
+              },
+              "polyline": {
+                "points": "{dxwCehqeVAC"
+              },
+              "start_location": {
+                "lat": 25.0326214,
+                "lng": 121.6629094
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "{dxwCehqeVAC",
+              "path": [
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66291000000001
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66293
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03262,
+                  "lng": 121.66291000000001
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66293
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0326214,
+                "lng": 121.6629094
+              },
+              "end_point": {
+                "lat": 25.0326262,
+                "lng": 121.6629306
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "7 公尺",
+            "value": 7
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 2
+          },
+          "end_address": "221台灣新北市汐止區汐碇路648-650號",
+          "end_location": {
+            "lat": 25.032629,
+            "lng": 121.6629998
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.0326262,
+            "lng": 121.6629306
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "7 公尺",
+                "value": 7
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 2
+              },
+              "end_location": {
+                "lat": 25.032629,
+                "lng": 121.6629998
+              },
+              "polyline": {
+                "points": "}dxwCihqeV?A?C?G"
+              },
+              "start_location": {
+                "lat": 25.0326262,
+                "lng": 121.6629306
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "}dxwCihqeV?A?C?G",
+              "path": [
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66293
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66294
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66296000000001
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66300000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66293
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66294
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66296000000001
+                },
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66300000000001
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0326262,
+                "lng": 121.6629306
+              },
+              "end_point": {
+                "lat": 25.032629,
+                "lng": 121.6629998
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "32 公尺",
+            "value": 32
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 10
+          },
+          "end_address": "TEST",
+          "end_location": {
+            "lat": 25.0325937,
+            "lng": 121.6633099
+          },
+          "start_address": "221台灣新北市汐止區汐碇路648-650號",
+          "start_location": {
+            "lat": 25.032629,
+            "lng": 121.6629998
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "32 公尺",
+                "value": 32
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 10
+              },
+              "end_location": {
+                "lat": 25.0325937,
+                "lng": 121.6633099
+              },
+              "polyline": {
+                "points": "}dxwCwhqeVBa@@I?A?G@G"
+              },
+              "start_location": {
+                "lat": 25.032629,
+                "lng": 121.6629998
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "}dxwCwhqeVBa@@I?A?G@G",
+              "path": [
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66300000000001
+                },
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66317000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66322000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66323000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66327000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66331000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03263,
+                  "lng": 121.66300000000001
+                },
+                {
+                  "lat": 25.032610000000002,
+                  "lng": 121.66317000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66322000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66323000000001
+                },
+                {
+                  "lat": 25.032600000000002,
+                  "lng": 121.66327000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66331000000001
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.032629,
+                "lng": 121.6629998
+              },
+              "end_point": {
+                "lat": 25.0325937,
+                "lng": 121.6633099
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "17 公尺",
+            "value": 17
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 5
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0325855,
+            "lng": 121.6634788
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0325937,
+            "lng": 121.6633099
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "17 公尺",
+                "value": 17
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 5
+              },
+              "end_location": {
+                "lat": 25.0325855,
+                "lng": 121.6634788
+              },
+              "polyline": {
+                "points": "udxwCujqeV?G?E?E?C?I"
+              },
+              "start_location": {
+                "lat": 25.0325937,
+                "lng": 121.6633099
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "udxwCujqeV?G?E?E?C?I",
+              "path": [
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66331000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66335000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66338
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66341000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66343
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66348
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66331000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66335000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66338
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66341000000001
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66343
+                },
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66348
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325937,
+                "lng": 121.6633099
+              },
+              "end_point": {
+                "lat": 25.0325855,
+                "lng": 121.6634788
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "14 公尺",
+            "value": 14
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 4
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0325481,
+            "lng": 121.6636092
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0325855,
+            "lng": 121.6634788
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "14 公尺",
+                "value": 14
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 4
+              },
+              "end_location": {
+                "lat": 25.0325481,
+                "lng": 121.6636092
+              },
+              "polyline": {
+                "points": "udxwCwkqeVBK@G@E"
+              },
+              "start_location": {
+                "lat": 25.0325855,
+                "lng": 121.6634788
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "udxwCwkqeVBK@G@E",
+              "path": [
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66348
+                },
+                {
+                  "lat": 25.032570000000003,
+                  "lng": 121.66354000000001
+                },
+                {
+                  "lat": 25.032560000000004,
+                  "lng": 121.66358000000001
+                },
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66361
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032590000000003,
+                  "lng": 121.66348
+                },
+                {
+                  "lat": 25.032570000000003,
+                  "lng": 121.66354000000001
+                },
+                {
+                  "lat": 25.032560000000004,
+                  "lng": 121.66358000000001
+                },
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66361
+                }
+              ],
+              "instructions": "往<b>東</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325855,
+                "lng": 121.6634788
+              },
+              "end_point": {
+                "lat": 25.0325481,
+                "lng": 121.6636092
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "1 公尺",
+            "value": 1
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 0
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0325432,
+            "lng": 121.6636216
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0325481,
+            "lng": 121.6636092
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "1 公尺",
+                "value": 1
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 0
+              },
+              "end_location": {
+                "lat": 25.0325432,
+                "lng": 121.6636216
+              },
+              "polyline": {
+                "points": "mdxwCqlqeV@A"
+              },
+              "start_location": {
+                "lat": 25.0325481,
+                "lng": 121.6636092
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "mdxwCqlqeV@A",
+              "path": [
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66361
+                },
+                {
+                  "lat": 25.03254,
+                  "lng": 121.66362000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03255,
+                  "lng": 121.66361
+                },
+                {
+                  "lat": 25.03254,
+                  "lng": 121.66362000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325481,
+                "lng": 121.6636092
+              },
+              "end_point": {
+                "lat": 25.0325432,
+                "lng": 121.6636216
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "15 公尺",
+            "value": 15
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 5
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0324859,
+            "lng": 121.6637578
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0325432,
+            "lng": 121.6636216
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "15 公尺",
+                "value": 15
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 5
+              },
+              "end_location": {
+                "lat": 25.0324859,
+                "lng": 121.6637578
+              },
+              "polyline": {
+                "points": "kdxwCslqeVBKDO"
+              },
+              "start_location": {
+                "lat": 25.0325432,
+                "lng": 121.6636216
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "kdxwCslqeVBKDO",
+              "path": [
+                {
+                  "lat": 25.03254,
+                  "lng": 121.66362000000001
+                },
+                {
+                  "lat": 25.03252,
+                  "lng": 121.66368000000001
+                },
+                {
+                  "lat": 25.032490000000003,
+                  "lng": 121.66376000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03254,
+                  "lng": 121.66362000000001
+                },
+                {
+                  "lat": 25.03252,
+                  "lng": 121.66368000000001
+                },
+                {
+                  "lat": 25.032490000000003,
+                  "lng": 121.66376000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0325432,
+                "lng": 121.6636216
+              },
+              "end_point": {
+                "lat": 25.0324859,
+                "lng": 121.6637578
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "5 公尺",
+            "value": 5
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 2
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0324625,
+            "lng": 121.6638018
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0324859,
+            "lng": 121.6637578
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "5 公尺",
+                "value": 5
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 2
+              },
+              "end_location": {
+                "lat": 25.0324625,
+                "lng": 121.6638018
+              },
+              "polyline": {
+                "points": "adxwComqeVDG"
+              },
+              "start_location": {
+                "lat": 25.0324859,
+                "lng": 121.6637578
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "adxwComqeVDG",
+              "path": [
+                {
+                  "lat": 25.032490000000003,
+                  "lng": 121.66376000000001
+                },
+                {
+                  "lat": 25.03246,
+                  "lng": 121.66380000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032490000000003,
+                  "lng": 121.66376000000001
+                },
+                {
+                  "lat": 25.03246,
+                  "lng": 121.66380000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324859,
+                "lng": 121.6637578
+              },
+              "end_point": {
+                "lat": 25.0324625,
+                "lng": 121.6638018
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "3 公尺",
+            "value": 3
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0324472,
+            "lng": 121.663828
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0324625,
+            "lng": 121.6638018
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "3 公尺",
+                "value": 3
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0324472,
+                "lng": 121.663828
+              },
+              "polyline": {
+                "points": "{cxwCwmqeV@E"
+              },
+              "start_location": {
+                "lat": 25.0324625,
+                "lng": 121.6638018
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "{cxwCwmqeV@E",
+              "path": [
+                {
+                  "lat": 25.03246,
+                  "lng": 121.66380000000001
+                },
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66383
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03246,
+                  "lng": 121.66380000000001
+                },
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66383
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324625,
+                "lng": 121.6638018
+              },
+              "end_point": {
+                "lat": 25.0324472,
+                "lng": 121.663828
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "4 公尺",
+            "value": 4
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 1
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0324241,
+            "lng": 121.6638633
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0324472,
+            "lng": 121.663828
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "4 公尺",
+                "value": 4
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 1
+              },
+              "end_location": {
+                "lat": 25.0324241,
+                "lng": 121.6638633
+              },
+              "polyline": {
+                "points": "ycxwC}mqeVDE"
+              },
+              "start_location": {
+                "lat": 25.0324472,
+                "lng": 121.663828
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "ycxwC}mqeVDE",
+              "path": [
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66383
+                },
+                {
+                  "lat": 25.032420000000002,
+                  "lng": 121.66386000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.03245,
+                  "lng": 121.66383
+                },
+                {
+                  "lat": 25.032420000000002,
+                  "lng": 121.66386000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324472,
+                "lng": 121.663828
+              },
+              "end_point": {
+                "lat": 25.0324241,
+                "lng": 121.6638633
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "10 公尺",
+            "value": 10
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 3
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0323701,
+            "lng": 121.6639401
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0324241,
+            "lng": 121.6638633
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "10 公尺",
+                "value": 10
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 3
+              },
+              "end_location": {
+                "lat": 25.0323701,
+                "lng": 121.6639401
+              },
+              "polyline": {
+                "points": "scxwCcnqeVBEDI"
+              },
+              "start_location": {
+                "lat": 25.0324241,
+                "lng": 121.6638633
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "scxwCcnqeVBEDI",
+              "path": [
+                {
+                  "lat": 25.032420000000002,
+                  "lng": 121.66386000000001
+                },
+                {
+                  "lat": 25.032400000000003,
+                  "lng": 121.66389000000001
+                },
+                {
+                  "lat": 25.032370000000004,
+                  "lng": 121.66394000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032420000000002,
+                  "lng": 121.66386000000001
+                },
+                {
+                  "lat": 25.032400000000003,
+                  "lng": 121.66389000000001
+                },
+                {
+                  "lat": 25.032370000000004,
+                  "lng": 121.66394000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0324241,
+                "lng": 121.6638633
+              },
+              "end_point": {
+                "lat": 25.0323701,
+                "lng": 121.6639401
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "7 公尺",
+            "value": 7
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 2
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0323227,
+            "lng": 121.663993
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0323701,
+            "lng": 121.6639401
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "7 公尺",
+                "value": 7
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 2
+              },
+              "end_location": {
+                "lat": 25.0323227,
+                "lng": 121.663993
+              },
+              "polyline": {
+                "points": "icxwCsnqeVHI"
+              },
+              "start_location": {
+                "lat": 25.0323701,
+                "lng": 121.6639401
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "icxwCsnqeVHI",
+              "path": [
+                {
+                  "lat": 25.032370000000004,
+                  "lng": 121.66394000000001
+                },
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66399000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032370000000004,
+                  "lng": 121.66394000000001
+                },
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66399000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0323701,
+                "lng": 121.6639401
+              },
+              "end_point": {
+                "lat": 25.0323227,
+                "lng": 121.663993
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "1 公尺",
+            "value": 1
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 0
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0323186,
+            "lng": 121.6639983
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0323227,
+            "lng": 121.663993
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "1 公尺",
+                "value": 1
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 0
+              },
+              "end_location": {
+                "lat": 25.0323186,
+                "lng": 121.6639983
+              },
+              "polyline": {
+                "points": "_cxwC}nqeV?A"
+              },
+              "start_location": {
+                "lat": 25.0323227,
+                "lng": 121.663993
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "_cxwC}nqeV?A",
+              "path": [
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66399000000001
+                },
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66400000000002
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66399000000001
+                },
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66400000000002
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0323227,
+                "lng": 121.663993
+              },
+              "end_point": {
+                "lat": 25.0323186,
+                "lng": 121.6639983
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "13 公尺",
+            "value": 13
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 4
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0322304,
+            "lng": 121.6640805
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0323186,
+            "lng": 121.6639983
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "13 公尺",
+                "value": 13
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 4
+              },
+              "end_location": {
+                "lat": 25.0322304,
+                "lng": 121.6640805
+              },
+              "polyline": {
+                "points": "_cxwC_oqeVFGHG"
+              },
+              "start_location": {
+                "lat": 25.0323186,
+                "lng": 121.6639983
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "_cxwC_oqeVFGHG",
+              "path": [
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66400000000002
+                },
+                {
+                  "lat": 25.032280000000004,
+                  "lng": 121.66404000000001
+                },
+                {
+                  "lat": 25.032230000000002,
+                  "lng": 121.66408000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032320000000002,
+                  "lng": 121.66400000000002
+                },
+                {
+                  "lat": 25.032280000000004,
+                  "lng": 121.66404000000001
+                },
+                {
+                  "lat": 25.032230000000002,
+                  "lng": 121.66408000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0323186,
+                "lng": 121.6639983
+              },
+              "end_point": {
+                "lat": 25.0322304,
+                "lng": 121.6640805
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "36 公尺",
+            "value": 36
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 11
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0319527,
+            "lng": 121.6642543
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0322304,
+            "lng": 121.6640805
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "36 公尺",
+                "value": 36
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 11
+              },
+              "end_location": {
+                "lat": 25.0319527,
+                "lng": 121.6642543
+              },
+              "polyline": {
+                "points": "mbxwCooqeVHERKXO"
+              },
+              "start_location": {
+                "lat": 25.0322304,
+                "lng": 121.6640805
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "mbxwCooqeVHERKXO",
+              "path": [
+                {
+                  "lat": 25.032230000000002,
+                  "lng": 121.66408000000001
+                },
+                {
+                  "lat": 25.03218,
+                  "lng": 121.66411000000001
+                },
+                {
+                  "lat": 25.03208,
+                  "lng": 121.66417000000001
+                },
+                {
+                  "lat": 25.031950000000002,
+                  "lng": 121.66425000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.032230000000002,
+                  "lng": 121.66408000000001
+                },
+                {
+                  "lat": 25.03218,
+                  "lng": 121.66411000000001
+                },
+                {
+                  "lat": 25.03208,
+                  "lng": 121.66417000000001
+                },
+                {
+                  "lat": 25.031950000000002,
+                  "lng": 121.66425000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0322304,
+                "lng": 121.6640805
+              },
+              "end_point": {
+                "lat": 25.0319527,
+                "lng": 121.6642543
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "16 公尺",
+            "value": 16
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 5
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0318412,
+            "lng": 121.6643514
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0319527,
+            "lng": 121.6642543
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "16 公尺",
+                "value": 16
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 5
+              },
+              "end_location": {
+                "lat": 25.0318412,
+                "lng": 121.6643514
+              },
+              "polyline": {
+                "points": "u`xwCqpqeVDEFEBCBC"
+              },
+              "start_location": {
+                "lat": 25.0319527,
+                "lng": 121.6642543
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "u`xwCqpqeVDEFEBCBC",
+              "path": [
+                {
+                  "lat": 25.031950000000002,
+                  "lng": 121.66425000000001
+                },
+                {
+                  "lat": 25.031920000000003,
+                  "lng": 121.66428
+                },
+                {
+                  "lat": 25.03188,
+                  "lng": 121.66431000000001
+                },
+                {
+                  "lat": 25.03186,
+                  "lng": 121.66433
+                },
+                {
+                  "lat": 25.031840000000003,
+                  "lng": 121.66435000000001
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.031950000000002,
+                  "lng": 121.66425000000001
+                },
+                {
+                  "lat": 25.031920000000003,
+                  "lng": 121.66428
+                },
+                {
+                  "lat": 25.03188,
+                  "lng": 121.66431000000001
+                },
+                {
+                  "lat": 25.03186,
+                  "lng": 121.66433
+                },
+                {
+                  "lat": 25.031840000000003,
+                  "lng": 121.66435000000001
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0319527,
+                "lng": 121.6642543
+              },
+              "end_point": {
+                "lat": 25.0318412,
+                "lng": 121.6643514
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "8 公尺",
+            "value": 8
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 2
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.031796,
+            "lng": 121.6644067
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.0318412,
+            "lng": 121.6643514
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "8 公尺",
+                "value": 8
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 2
+              },
+              "end_location": {
+                "lat": 25.031796,
+                "lng": 121.6644067
+              },
+              "polyline": {
+                "points": "_`xwCeqqeVDG@C"
+              },
+              "start_location": {
+                "lat": 25.0318412,
+                "lng": 121.6643514
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "_`xwCeqqeVDG@C",
+              "path": [
+                {
+                  "lat": 25.031840000000003,
+                  "lng": 121.66435000000001
+                },
+                {
+                  "lat": 25.031810000000004,
+                  "lng": 121.66439000000001
+                },
+                {
+                  "lat": 25.0318,
+                  "lng": 121.66441
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.031840000000003,
+                  "lng": 121.66435000000001
+                },
+                {
+                  "lat": 25.031810000000004,
+                  "lng": 121.66439000000001
+                },
+                {
+                  "lat": 25.0318,
+                  "lng": 121.66441
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.0318412,
+                "lng": 121.6643514
+              },
+              "end_point": {
+                "lat": 25.031796,
+                "lng": 121.6644067
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        },
+        {
+          "distance": {
+            "text": "6 公尺",
+            "value": 6
+          },
+          "duration": {
+            "text": "1 分鐘",
+            "value": 2
+          },
+          "end_address": "TESTQQ",
+          "end_location": {
+            "lat": 25.0317647,
+            "lng": 121.6644538
+          },
+          "start_address": "TESTQQ",
+          "start_location": {
+            "lat": 25.031796,
+            "lng": 121.6644067
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "6 公尺",
+                "value": 6
+              },
+              "duration": {
+                "text": "1 分鐘",
+                "value": 2
+              },
+              "end_location": {
+                "lat": 25.0317647,
+                "lng": 121.6644538
+              },
+              "polyline": {
+                "points": "w_xwCqqqeV@A@ABC"
+              },
+              "start_location": {
+                "lat": 25.031796,
+                "lng": 121.6644067
+              },
+              "travel_mode": "BICYCLING",
+              "encoded_lat_lngs": "w_xwCqqqeV@A@ABC",
+              "path": [
+                {
+                  "lat": 25.0318,
+                  "lng": 121.66441
+                },
+                {
+                  "lat": 25.03179,
+                  "lng": 121.66442
+                },
+                {
+                  "lat": 25.03178,
+                  "lng": 121.66443000000001
+                },
+                {
+                  "lat": 25.031760000000002,
+                  "lng": 121.66445000000002
+                }
+              ],
+              "lat_lngs": [
+                {
+                  "lat": 25.0318,
+                  "lng": 121.66441
+                },
+                {
+                  "lat": 25.03179,
+                  "lng": 121.66442
+                },
+                {
+                  "lat": 25.03178,
+                  "lng": 121.66443000000001
+                },
+                {
+                  "lat": 25.031760000000002,
+                  "lng": 121.66445000000002
+                }
+              ],
+              "instructions": "往<b>東南</b>走<b>汐碇路</b>/<wbr/><b>北33鄉道</b>",
+              "maneuver": "",
+              "start_point": {
+                "lat": 25.031796,
+                "lng": 121.6644067
+              },
+              "end_point": {
+                "lat": 25.0317647,
+                "lng": 121.6644538
+              }
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": [],
+          "via_waypoints": []
+        }
+      ],
+      "overview_polyline": "wcxwCsfqeV_@e@EOD{@@q@Lg@Rc@Zc@nAu@V[",
+      "summary": "汐碇路/北33鄉道",
+      "warnings": [
+        "單車路線指示目前為測試版。 請謹慎使用 – 此路線可能包含不適合騎腳踏車的街道。"
+      ],
+      "waypoint_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "overview_path": [
+        {
+          "lat": 25.03244,
+          "lng": 121.66266000000002
+        },
+        {
+          "lat": 25.032600000000002,
+          "lng": 121.66285
+        },
+        {
+          "lat": 25.03263,
+          "lng": 121.66293
+        },
+        {
+          "lat": 25.032600000000002,
+          "lng": 121.66323000000001
+        },
+        {
+          "lat": 25.032590000000003,
+          "lng": 121.66348
+        },
+        {
+          "lat": 25.03252,
+          "lng": 121.66368000000001
+        },
+        {
+          "lat": 25.032420000000002,
+          "lng": 121.66386000000001
+        },
+        {
+          "lat": 25.032280000000004,
+          "lng": 121.66404000000001
+        },
+        {
+          "lat": 25.03188,
+          "lng": 121.66431000000001
+        },
+        {
+          "lat": 25.031760000000002,
+          "lng": 121.66445000000002
+        }
+      ]
+    }
+  ],
+  "request": {
+    "origin": {
+      "location": {
+        "lat": 25.03244,
+        "lng": 121.66266
+      }
+    },
+    "destination": {
+      "location": {
+        "lat": 25.03176,
+        "lng": 121.66445
+      }
+    },
+    "travelMode": "BICYCLING"
+  }
+}
