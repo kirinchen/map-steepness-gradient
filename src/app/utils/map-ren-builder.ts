@@ -3,7 +3,12 @@ import { Path } from './../model/path';
 export class MapRenBuilder {
 
 
+
   private paths: Array<Path>;
+
+  public static build(): MapRenBuilder {
+    return new MapRenBuilder();
+  }
 
   public setPaths(ps: Array<Path>): MapRenBuilder {
     this.paths = ps;
@@ -14,8 +19,41 @@ export class MapRenBuilder {
   public gen(): MapRenData {
     const ans = new MapRenData();
     ans.request = this.genRequest();
+    ans.routes.push(this.genRoute());
     return ans;
   }
+
+
+  private genRoute(): Route {
+    const ans = new Route();
+    for (let i = 0; i < this.paths.length; i++) {
+      ans.waypoint_order.push(i);
+    }
+    ans.legs = this.genLegs();
+    return ans;
+  }
+
+  private genLegs(): Array<Leg> {
+    const l = new Array<Leg>();
+    for (const p of this.paths) {
+      l.push(this.genLeg(p));
+    }
+    return l;
+  }
+
+  private genLeg(p: Path): Leg {
+    const ans = new Leg();
+    ans.distance = {
+      value: p.distance,
+      text: ''
+    };
+    ans.start_address = 'start:' + p.start.elevation.toFixed(2) + '(' + p.getAngleDeg().toFixed(2) + ')';
+    ans.start_location = LatLng.gen(p.start);
+    ans.end_address = 'end:' + p.end.elevation.toFixed(2) + '(' + p.getAngleDeg().toFixed(2) + ')';
+    ans.end_location = LatLng.gen(p.end);
+    return ans;
+  }
+
 
 
   private genRequest(): Request {
@@ -39,7 +77,6 @@ export class MapRenBuilder {
     return this.paths[this.paths.length - 1];
   }
 
-
 }
 
 export class MapRenData {
@@ -60,10 +97,10 @@ export class Request {
 
 export class Route {
   bounds: {
-    south: 0,
-    west: 0,
-    north: 0,
-    east: 0
+    south: number,
+    west: number,
+    north: number,
+    east: number
   };
   legs = new Array<Leg>();
   // tslint:disable-next-line: variable-name
@@ -73,11 +110,11 @@ export class Route {
 export class Leg {
   distance: {
     text: '',
-    value: 0
+    value: number
   };
   duration: {
     text: '',
-    value: 0
+    value: number
   };
   // tslint:disable-next-line: variable-name
   end_address = '';
@@ -107,5 +144,6 @@ export class LatLng {
       lng: li.longitude
     };
   }
+
 
 }

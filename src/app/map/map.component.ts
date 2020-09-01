@@ -1,8 +1,9 @@
+import { MapRenBuilder } from './../utils/map-ren-builder';
 import { CurPathsService } from './../service/cur-paths.service';
 import { CommUtils } from './../comm-utils';
 import { Component, OnInit } from '@angular/core';
-import { retry } from 'rxjs/operators';
 import * as renData from '../../assets/json/test-ren.json';
+import { Path } from '../model/path';
 
 declare var jquery: any;
 declare let $: any;
@@ -38,10 +39,11 @@ export class MapComponent implements OnInit {
     switch (this.mode) {
       case DrawMode.NONE: return;
       case DrawMode.ALL_PATH:
-        this.drawPaths();
+        this.drawAllPaths();
         return;
       case DrawMode.SELECTED:
-        // TODO
+        this.drawSelPaths();
+        return;
         return;
 
     }
@@ -52,13 +54,20 @@ export class MapComponent implements OnInit {
     this.draw();
   }
 
-  private drawPaths(): void {
+  private drawAllPaths(): void {
+    this.drawPaths(this.curPaths.pathsInfo.paths);
+  }
+
+  private drawSelPaths(): void {
+    const ps = this.curPaths.pathsInfo.paths.filter(p => p.selected);
+    this.drawPaths(ps);
+  }
+
+  private drawPaths(ps: Array<Path>): void {
     const directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(this.map);
-    this.curPaths.pathsInfo.response.forEach(r => {
-      console.log(JSON.stringify(r));
-      directionsRenderer.setDirections(r);
-    });
+    const rd = MapRenBuilder.build().setPaths(ps).gen();
+    directionsRenderer.setDirections(rd);
   }
 
   public drawTest(): void {
