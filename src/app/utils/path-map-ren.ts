@@ -7,6 +7,13 @@ declare let google: any;
 
 export class PathMapRen {
 
+  public static DOT = [
+    'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+     'http://maps.google.com/mapfiles/ms/icons/pink-dot.png',
+    'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+     'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+  ];
+
   private paths: Array<Path>;
   private map: any;
 
@@ -33,19 +40,22 @@ export class PathMapRen {
 
     const ans = new Array<any>();
     const stmarker = this.genMark(true, i);
-    const edmarker = this.genMark(false, i);;
-
-
+    const edmarker = this.genMark(false, i);
 
     return ans;
   }
 
   private genMark(sted: boolean, i: number): any {
     const p = this.paths[i];
+    const icIdx = i % PathMapRen.DOT.length;
+    const iconU = PathMapRen.DOT[icIdx];
     const mk = new google.maps.Marker({
       position: p.end.getLatLng(),
       map: this.map,
-      label: i + (sted ? 'start' : 'end')
+      label: sted ? ' start' : 'end',
+      icon: {
+        url: iconU
+      }
     });
     const infowindow = this.genInfoWin(sted, i);
     mk.addListener('click', () => {
@@ -64,5 +74,9 @@ export class PathMapRen {
     return 'Test';
 
   }
+
+}
+
+export enum MarkDot {
 
 }
