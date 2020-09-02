@@ -1,4 +1,4 @@
-import { PathMapRen } from './../utils/path-map-ren';
+import { PathMapRen, MarkerBd } from './../utils/path-map-ren';
 import { CurPathsService } from './../service/cur-paths.service';
 import { CommUtils } from './../comm-utils';
 import { Component, OnInit } from '@angular/core';
@@ -20,6 +20,8 @@ export class MapComponent implements OnInit {
   mode = DrawMode.NONE;
   DrawMode = DrawMode;
   map: any;
+  markers = new Array<MarkerBd>();
+
   constructor(
     private curPaths: CurPathsService
   ) { }
@@ -37,7 +39,9 @@ export class MapComponent implements OnInit {
 
   public draw(): void {
     switch (this.mode) {
-      case DrawMode.NONE: return;
+      case DrawMode.NONE:
+        this.clear();
+        return;
       case DrawMode.ALL_PATH:
         this.drawAllPaths();
         return;
@@ -63,8 +67,14 @@ export class MapComponent implements OnInit {
     this.drawPaths(ps);
   }
 
+  private clear(): void {
+    this.markers.forEach(m => m.removeMe());
+
+  }
+
   private drawPaths(ps: Array<Path>): void {
-    PathMapRen.build().setPaths(ps).draw(this.map);
+    this.clear();
+    this.markers = PathMapRen.build().setPaths(ps).draw(this.map);
   }
 
   public drawTest(): void {
