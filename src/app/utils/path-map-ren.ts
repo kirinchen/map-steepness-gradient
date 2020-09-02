@@ -1,3 +1,4 @@
+import { LocInfo } from './../model/loc-info';
 import { Path } from '../model/path';
 
 declare var jquery: any;
@@ -29,20 +30,39 @@ export class PathMapRen {
 
 
   private genMarkByIdx(i: number): Array<any> {
-    const p = this.paths[i];
+
     const ans = new Array<any>();
-    const stmarker = new google.maps.Marker({
-      position: p.start.getLatLng(),
-      map: this.map,
-      label: i + '>start'
-    });
-    const edmarker = new google.maps.Marker({
-      position: p.end.getLatLng(),
-      map: this.map,
-      label: i + '>end'
-    });
+    const stmarker = this.genMark(true, i);
+    const edmarker = this.genMark(false, i);;
+
+
 
     return ans;
+  }
+
+  private genMark(sted: boolean, i: number): any {
+    const p = this.paths[i];
+    const mk = new google.maps.Marker({
+      position: p.end.getLatLng(),
+      map: this.map,
+      label: i + (sted ? 'start' : 'end')
+    });
+    const infowindow = this.genInfoWin(sted, i);
+    mk.addListener('click', () => {
+      infowindow.open(this.map, mk);
+    });
+  }
+
+
+  private genInfoWin(sted: boolean, i: number): any {
+    const ans = new google.maps.InfoWindow({
+      content: this.genInfoContent()
+    });
+    return ans;
+  }
+  private genInfoContent(): string {
+    return 'Test';
+
   }
 
 }
