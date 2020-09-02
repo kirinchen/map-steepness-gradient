@@ -64,7 +64,6 @@ export class GMapRestService {
   private async fetchPath(ans: PathBundle, blocs: LocInfo[]): Promise<void> {
     if (blocs.length <= 0) { return; }
     const bd = await this.fetchPathFromGmap(blocs);
-    ans.response.push(bd);
     const ps = this.parsePaths(bd);
     this.setupElevation(ps);
     ans.paths = ans.paths.concat(ps);
@@ -195,7 +194,7 @@ export class PathBundle {
 
   @Type(() => Path)
   public paths: Array<Path> = new Array<Path>();
-  public response: Array<any> = Array<any>();
+
 }
 
 

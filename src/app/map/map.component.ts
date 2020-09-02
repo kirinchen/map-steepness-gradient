@@ -1,4 +1,4 @@
-import { MapRenBuilder } from './../utils/map-ren-builder';
+import { PathMapRen } from './../utils/path-map-ren';
 import { CurPathsService } from './../service/cur-paths.service';
 import { CommUtils } from './../comm-utils';
 import { Component, OnInit } from '@angular/core';
@@ -64,10 +64,7 @@ export class MapComponent implements OnInit {
   }
 
   private drawPaths(ps: Array<Path>): void {
-    const directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(this.map);
-    const rd = MapRenBuilder.build().setPaths(ps).gen();
-    directionsRenderer.setDirections(rd);
+    PathMapRen.build().setPaths(ps).draw(this.map);
   }
 
   public drawTest(): void {
