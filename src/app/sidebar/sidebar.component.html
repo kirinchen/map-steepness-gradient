@@ -11,7 +11,7 @@
       </a>
     </div>
     <ul class="nav">
-      <li class="nav-item active">
+      <li [class.active]="urlParam.eqPath('config')" class="nav-item active">
         <a class="nav-link" routerLink="config">
           <i class="fas fa-folder-open"></i>
           <p>Config</p>

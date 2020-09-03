@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UrlParamsService } from '../service/url-params.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public urlParam: UrlParamsService
+  ) { }
 
   ngOnInit(): void {
   }
