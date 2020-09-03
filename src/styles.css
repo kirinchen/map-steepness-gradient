@@ -7,6 +7,13 @@
   background-color: #26a35698;
 }
 
+#progress-dialog-container {
+  -webkit-box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  -moz-box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  box-shadow: inset 0px 0px 222px 200px rgba(115,135,171,0.84);
+  background-color: #26a35698;
+}
+
 .overlay {
   position: absolute;
   top: 0;

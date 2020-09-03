@@ -82,10 +82,11 @@ export class PathMapRen {
     const prs = sted ? 'start' : 'end';
     const locs = `<li class="alert alert-primary ">${prs}:${l.getPointStr()} </li>`;
     const elstr = `<li class="list-group-item">Height:${l.elevation.toFixed(2)} </li>`;
+    const distr = `<li class="list-group-item">Distance:${p.distance.toFixed(2)} </li>`;
     const degstr = `<li class="list-group-item">Steepness:${p.getAngleDeg().toFixed(2)} </li>`;
     const gmapLink = 'https://maps.google.com/?q=' + l.getPointStr();
     const opmap = `<a href="${gmapLink}"  target= _blank type="button list-group-item" class="btn btn-primary">Open Gmap</a>`;
-    const html = `<ul class="list-group"> ${locs}  ${elstr} ${degstr} ${opmap}    <li class="list-group-item"></li>  </ul>`;
+    const html = `<ul class="list-group"> ${locs}  ${distr} ${elstr}  ${degstr} ${opmap}    <li class="list-group-item"></li>  </ul>`;
     return html;
 
   }

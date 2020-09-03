@@ -7,63 +7,33 @@
   <div class="sidebar-wrapper">
     <div class="logo">
       <a class="simple-text">
-        BZK
+        Google Map Steepness
       </a>
     </div>
     <ul class="nav">
-      <li [class.active]="urlParam.eqPath('config')" class="nav-item active">
+      <li [class.active]="urlParam.eqPath('/config')" class="nav-item">
         <a class="nav-link" routerLink="config">
-          <i class="fas fa-folder-open"></i>
+          <i class="nc-icon nc-settings-gear-64"></i>
           <p>Config</p>
         </a>
       </li>
 
-      <li class="nav-item active">
+      <li class="nav-item " [class.active]="urlParam.eqPath('/load')">
         <a class="nav-link" routerLink="load">
           <i class="fas fa-folder-open"></i>
           <p>Load Data</p>
         </a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item " [class.active]="urlParam.eqPath('/locs')">
         <a class="nav-link" routerLink="locs">
-          <i class="far fa-edit"></i>
+          <i class="nc-icon nc-notes"></i>
           <p>Locs</p>
         </a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item " [class.active]="urlParam.eqPath('/map')">
         <a class="nav-link" routerLink="map">
-          <i class="far fa-edit"></i>
-          <p>Map</p>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="./table.html">
-          <i class="nc-icon nc-notes"></i>
-          <p>Table List</p>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="./typography.html">
-          <i class="nc-icon nc-paper-2"></i>
-          <p>Typography</p>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="./icons.html">
-          <i class="nc-icon nc-atom"></i>
-          <p>Icons</p>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="./maps.html">
           <i class="nc-icon nc-pin-3"></i>
-          <p>Maps</p>
-        </a>
-      </li>
-      <li>
-        <a class="nav-link" href="./notifications.html">
-          <i class="nc-icon nc-bell-55"></i>
-          <p>Notifications</p>
+          <p>Map</p>
         </a>
       </li>
       <li class="nav-item active active-pro">

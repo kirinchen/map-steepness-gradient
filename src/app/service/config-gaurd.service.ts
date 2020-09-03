@@ -14,9 +14,17 @@ export class ConfigGaurdService implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+
+    if(state.url === '/'){
+      this.router.navigate(['load']);
+      return false;
+    }
+
     if (this.config.existGmapkey()) {
       return true;
     }
+
+
 
     this.router.navigate(['config']);
     return false;
