@@ -3,12 +3,23 @@ import { ConfigService } from './../service/config.service';
 import { Component, OnInit } from '@angular/core';
 import { GMapRestService } from '../service/gmap-rest.service';
 
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
   styleUrls: ['./config.component.css']
 })
 export class ConfigComponent implements OnInit {
+
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
 
   public gmapApiKey: string;
   public minPathDist: number;

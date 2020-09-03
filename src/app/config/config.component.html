@@ -1,4 +1,23 @@
-<a class="btn btn-primary" href="javascript:void(0)" (click)="save()" role="button">Save</a>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Min Path Distance</span>
+  </div>
+  <input [(ngModel)]="minPathDist" type="number" class="form-control" aria-label="Plz input your Min Path Distance"
+    aria-describedby="inputGroup-sizing-sm">
+</div>
+
+
 
 <div class="input-group input-group-sm mb-3">
   <div class="input-group-prepend">
@@ -7,10 +26,6 @@
   <input [(ngModel)]="gmapApiKey" type="text" class="form-control" aria-label="Plz input your google map api key"
     aria-describedby="inputGroup-sizing-sm">
 </div>
-<div class="input-group input-group-sm mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Min Path Distance</span>
-  </div>
-  <input [(ngModel)]="minPathDist" type="number" class="form-control" aria-label="Plz input your Min Path Distance"
-    aria-describedby="inputGroup-sizing-sm">
-</div>
+
+
+<a class="btn btn-primary m-3" href="javascript:void(0)" (click)="save()" role="button">Save</a>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlParamsService } from './service/url-params.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,9 @@ export class AppComponent implements OnInit {
 
   constructor(
     public urlParams: UrlParamsService,
+    private translate: TranslateService
   ) {
-
+    this.translate.use('zh-tw');
   }
   ngOnInit(): void {
   }

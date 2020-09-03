@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule, JsonpInterceptor } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule, JsonpInterceptor, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DesignComponent } from './header/design/design.component';
 import { ModelRepoMenuComponent } from './header/model-repo-menu/model-repo-menu.component';
@@ -16,6 +16,13 @@ import { ConfigComponent } from './config/config.component';
 import { MapComponent } from './map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {MatSelectModule} from '@angular/material/select';
+
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -37,7 +44,15 @@ import { MatSliderModule } from '@angular/material/slider';
     FormsModule,
     HttpClientJsonpModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatSelectModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true }
