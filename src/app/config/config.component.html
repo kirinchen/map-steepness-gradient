@@ -1,10 +1,8 @@
-
-
 <mat-form-field appearance="fill">
   <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
+  <mat-select [(ngModel)]="selLang">
+    <mat-option *ngFor="let lan of language.langs" [value]="lan.value">
+      {{lan.title}}
     </mat-option>
   </mat-select>
 </mat-form-field>

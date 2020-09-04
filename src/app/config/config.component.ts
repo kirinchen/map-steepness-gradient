@@ -1,3 +1,4 @@
+import { LanguageService } from './../service/language.service';
 import { ToastInfo, ToastService } from './../service/toast.service';
 import { ConfigService } from './../service/config.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,23 +16,22 @@ interface Food {
 })
 export class ConfigComponent implements OnInit {
 
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
+
 
   public gmapApiKey: string;
   public minPathDist: number;
+  public selLang: string;
 
   constructor(
     private config: ConfigService,
-    private toast: ToastService
+    private toast: ToastService,
+    public language: LanguageService
   ) { }
 
   ngOnInit(): void {
     this.gmapApiKey = this.config.loadGmapKey();
     this.minPathDist = this.config.loadPathMinDist(15);
+    this.selLang = this.language.getSaveLang().value;
   }
 
   public async save(): Promise<void> {
@@ -41,6 +41,7 @@ export class ConfigComponent implements OnInit {
     });
     this.config.saveGmapKey(this.gmapApiKey);
     this.config.savePathMinDist(this.minPathDist);
+    this.language.saveLang(this.language.findByVal(this.selLang));
     location.reload();
   }
 

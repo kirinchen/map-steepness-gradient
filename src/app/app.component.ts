@@ -1,3 +1,4 @@
+import { LanguageService } from './service/language.service';
 import { Component, OnInit } from '@angular/core';
 import { UrlParamsService } from './service/url-params.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,10 +15,11 @@ export class AppComponent implements OnInit {
 
   constructor(
     public urlParams: UrlParamsService,
-    private translate: TranslateService
+    private language: LanguageService
   ) {
-    this.translate.use('zh-tw');
+    language.applyLang();
   }
+
   ngOnInit(): void {
   }
 
