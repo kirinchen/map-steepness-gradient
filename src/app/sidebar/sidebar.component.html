@@ -15,26 +15,26 @@
       <li [class.active]="urlParam.eqPath('/config')" class="nav-item">
         <a class="nav-link" routerLink="config">
           <i class="nc-icon nc-settings-gear-64"></i>
-          <p>Config</p>
+          <p> {{ 'config' | translate }} </p>
         </a>
       </li>
 
       <li class="nav-item " [class.active]="urlParam.eqPath('/load')">
         <a class="nav-link" routerLink="load">
           <i class="fas fa-folder-open"></i>
-          <p>Load Data</p>
+          <p> {{ 'import'|translate }} </p>
         </a>
       </li>
       <li class="nav-item " [class.active]="urlParam.eqPath('/locs')">
         <a class="nav-link" routerLink="locs">
           <i class="nc-icon nc-notes"></i>
-          <p>Locs</p>
+          <p>{{ 'locs' | translate }}</p>
         </a>
       </li>
       <li class="nav-item " [class.active]="urlParam.eqPath('/map')">
         <a class="nav-link" routerLink="map">
           <i class="nc-icon nc-pin-3"></i>
-          <p>Map</p>
+          <p>{{ 'map' | translate }}</p>
         </a>
       </li>
       <li class="nav-item active active-pro">

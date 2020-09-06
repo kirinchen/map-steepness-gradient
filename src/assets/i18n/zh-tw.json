@@ -1,4 +1,12 @@
 {
   "welcome": "歡迎使用本應用",
-  "getName": "你好，我是{{name}}"
+  "getName": "你好，我是{{name}}",
+  "config": "設定",
+  "import": "匯入 KML",
+  "locs": "路徑表",
+  "map": "地圖",
+  "minPathDistance": "路徑最短距離",
+  "gmapKey": "Google地圖金鑰",
+  "save": "存檔",
+  "Load": "讀取"
 }

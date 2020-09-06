@@ -4,5 +4,9 @@
   "config":"Config",
   "import":"import KML",
   "locs":"Path table",
-  "map":"map"
+  "map":"map",
+  "minPathDistance":"Min Path Distance",
+  "gmapKey":"Google Map Api Key",
+  "save":"Save",
+  "Load":"Load"
 }

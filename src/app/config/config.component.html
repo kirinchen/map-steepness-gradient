@@ -9,7 +9,7 @@
 
 <div class="input-group input-group-sm mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Min Path Distance</span>
+    <span class="input-group-text" id="inputGroup-sizing-sm">{{'minPathDistance' | translate}}</span>
   </div>
   <input [(ngModel)]="minPathDist" type="number" class="form-control" aria-label="Plz input your Min Path Distance"
     aria-describedby="inputGroup-sizing-sm">
@@ -19,11 +19,11 @@
 
 <div class="input-group input-group-sm mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Gmap API Key</span>
+    <span class="input-group-text" id="inputGroup-sizing-sm">{{'gmapKey'|translate}}</span>
   </div>
   <input [(ngModel)]="gmapApiKey" type="text" class="form-control" aria-label="Plz input your google map api key"
     aria-describedby="inputGroup-sizing-sm">
 </div>
 
 
-<a class="btn btn-primary m-3" href="javascript:void(0)" (click)="save()" role="button">Save</a>
+<a class="btn btn-primary m-3" href="javascript:void(0)" (click)="save()" role="button">{{'save'|translate}}</a>
