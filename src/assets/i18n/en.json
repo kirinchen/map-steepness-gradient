@@ -1,4 +1,8 @@
 {
   "welcome":"welcome to this app",
-  "getName":"hello I am {{name}}"
+  "getName":"hello I am {{name}}",
+  "config":"Config",
+  "import":"import KML",
+  "locs":"Path table",
+  "map":"map"
 }
