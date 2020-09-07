@@ -1,6 +1,8 @@
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.ALL_PATH)">Draw All Path</button>
-  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.SELECTED)">Draw Select Path</button>
-  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.NONE)">Clear</button>
+  <button type="button" class="btn btn-secondary"
+    (click)="setMode(DrawMode.ALL_PATH)">{{'DrawAllPath'|translate}}</button>
+  <button type="button" class="btn btn-secondary"
+    (click)="setMode(DrawMode.SELECTED)">{{'DrawSelectPath'|translate}}</button>
+  <button type="button" class="btn btn-secondary" (click)="setMode(DrawMode.NONE)">{{'Clear'|translate}}</button>
 </div>
 <div id="map"></div>

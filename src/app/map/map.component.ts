@@ -4,6 +4,7 @@ import { CommUtils } from './../comm-utils';
 import { Component, OnInit } from '@angular/core';
 import * as renData from '../../assets/json/test-ren.json';
 import { Path } from '../model/path';
+import { ActivatedRoute } from '@angular/router';
 
 declare var jquery: any;
 declare let $: any;
@@ -23,7 +24,8 @@ export class MapComponent implements OnInit {
   markers = new Array<MarkerBd>();
 
   constructor(
-    private curPaths: CurPathsService
+    private curPaths: CurPathsService,
+    private route: ActivatedRoute
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -32,6 +34,11 @@ export class MapComponent implements OnInit {
       center: { lat: -34.397, lng: 150.644 },
       zoom: 8
     });
+
+    const act = this.route.snapshot.paramMap.get('act');
+    if (act === 'drawSel') {
+      this.mode = DrawMode.SELECTED;
+    }
     this.draw();
 
   }

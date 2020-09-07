@@ -1,5 +1,5 @@
 <mat-form-field appearance="fill">
-  <mat-label>Favorite food</mat-label>
+  <mat-label>{{'ChooseLang'|translate}}</mat-label>
   <mat-select [(ngModel)]="selLang">
     <mat-option *ngFor="let lan of language.langs" [value]="lan.value">
       {{lan.title}}

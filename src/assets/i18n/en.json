@@ -9,5 +9,17 @@
   "gmapKey":"Google Map Api Key",
   "save":"Save",
   "Load":"Load",
-  "Selct":"Selct"
+  "Selct":"Selct",
+  "Start" :"Start",
+  "End":"End",
+  "Dinstance":"Dinstance",
+  "Height":"Height",
+  "SelectQuery":"Select Current",
+  "UnSelectAll":"UnSelect All",
+  "DrawInMap":"Display In Map",
+  "Steepness":"Steepness",
+  "ChooseLang":"Choose Language",
+  "DrawAllPath":"Display All Path",
+  "DrawSelectPath":"Display Selected",
+  "Clear":"Clear"
 }

@@ -3,7 +3,7 @@
 
   <div class="input-group ">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Steepness ( {{steepnessFilter}} ) </span>
+      <span class="input-group-text" id="basic-addon1">{{'Steepness'|translate}} ( {{steepnessFilter}} ) </span>
     </div>
     <mat-slider min="1" [(ngModel)]="steepnessFilter" class="form-control" max="90" step="0.1" value="0"></mat-slider>
   </div>
@@ -15,10 +15,10 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">{{'Selct'|translate}}</th>
-        <th scope="col">Start</th>
-        <th scope="col">End</th>
-        <th scope="col">Dinstance</th>
-        <th scope="col">Height</th>
+        <th scope="col">{{ 'Start'|translate }}</th>
+        <th scope="col">{{ 'End'|translate }}</th>
+        <th scope="col">{{ 'Dinstance'|translate }}</th>
+        <th scope="col">{{ 'Height'|translate }}</th>
       </tr>
     </thead>
     <tbody>
@@ -34,7 +34,7 @@
   </table>
 </div>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary" (click)="selectByQuery()">Select Query</button>
-  <button type="button" class="btn btn-secondary" (click)="unSelectAll()">Un Select ALL</button>
-  <button type="button" class="btn btn-secondary">Draw In Map</button>
+  <button type="button" class="btn btn-secondary" (click)="selectByQuery()">{{'SelectQuery'|translate}}</button>
+  <button type="button" class="btn btn-secondary" (click)="unSelectAll()">{{'UnSelectAll'|translate}}</button>
+  <button type="button" class="btn btn-secondary" (click)="drawinMap()">{{'DrawInMap'|translate}}</button>
 </div>

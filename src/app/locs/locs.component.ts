@@ -1,6 +1,7 @@
 import { Path } from './../model/path';
 import { CurPathsService } from './../service/cur-paths.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-locs',
@@ -12,7 +13,8 @@ export class LocsComponent implements OnInit {
   public steepnessFilter = 0;
 
   constructor(
-    public curPaths: CurPathsService
+    public curPaths: CurPathsService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -30,6 +32,10 @@ export class LocsComponent implements OnInit {
 
   public unSelectAll(): void {
     this.curPaths.pathsInfo.paths.forEach(p => p.selected = false);
+  }
+
+  public drawinMap(): void {
+    this.router.navigate(['/map', { act: 'drawSel' }]);
   }
 
 }
