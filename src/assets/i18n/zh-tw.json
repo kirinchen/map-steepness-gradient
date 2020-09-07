@@ -8,5 +8,6 @@
   "minPathDistance": "路徑最短距離",
   "gmapKey": "Google地圖金鑰",
   "save": "存檔",
-  "Load": "讀取"
+  "Load": "讀取",
+  "Selct":"選取"
 }

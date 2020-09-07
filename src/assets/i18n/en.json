@@ -8,5 +8,6 @@
   "minPathDistance":"Min Path Distance",
   "gmapKey":"Google Map Api Key",
   "save":"Save",
-  "Load":"Load"
+  "Load":"Load",
+  "Selct":"Selct"
 }
