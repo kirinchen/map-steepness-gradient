@@ -43,12 +43,12 @@ export class Path {
     return this.end.elevation - this.start.elevation;
   }
 
-  public getSteepness(): number {
+  public getGradient(): number {
     return this.getDifHeight() / this.distance;
   }
 
   public getAngleDeg(): number {
-    const angleRad = Math.atan(this.getSteepness());
+    const angleRad = Math.atan(this.getGradient());
     const angleDeg = angleRad * 180 / Math.PI;
     return (angleDeg);
   }

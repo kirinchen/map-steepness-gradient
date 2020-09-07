@@ -23,6 +23,8 @@
   "DrawAllPath":"顯示所有",
   "DrawSelectPath":"顯示所選",
   "Clear":"清除",
-  "OrInput" : "或是直接輸入KML的內容 ⇙"
+  "OrInput" : "或是直接輸入KML的內容 ⇙",
+  "gradient":"坡度",
+  "angle":"夾角"
 
 }

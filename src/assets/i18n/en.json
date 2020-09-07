@@ -23,5 +23,7 @@
   "DrawAllPath":"Display All Path",
   "DrawSelectPath":"Display Selected",
   "Clear":"Clear",
-  "OrInput" : "Or Enter the content of KML below ⇙"
+  "OrInput" : "Or Enter the content of KML below ⇙",
+  "gradient":"gradient",
+  "angle":"angle"
 }
