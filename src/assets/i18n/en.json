@@ -8,12 +8,13 @@
   "minPathDistance":"Min Path Distance",
   "gmapKey":"Google Map Api Key",
   "save":"Save",
-  "Load":"Load",
+  "Load":"Parsing",
   "Selct":"Selct",
   "Start" :"Start",
   "End":"End",
   "Dinstance":"Dinstance",
   "Height":"Height",
+  "Gradients_Angle":"Gradients / Angle",
   "SelectQuery":"Select Current",
   "UnSelectAll":"UnSelect All",
   "DrawInMap":"Display In Map",
@@ -21,5 +22,6 @@
   "ChooseLang":"Choose Language",
   "DrawAllPath":"Display All Path",
   "DrawSelectPath":"Display Selected",
-  "Clear":"Clear"
+  "Clear":"Clear",
+  "OrInput" : "Or Enter the content of KML below ⇙"
 }

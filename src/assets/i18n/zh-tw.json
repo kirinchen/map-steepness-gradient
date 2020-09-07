@@ -8,12 +8,13 @@
   "minPathDistance": "路徑最短距離",
   "gmapKey": "Google地圖金鑰",
   "save": "存檔",
-  "Load": "讀取",
+  "Load": "解析",
   "Selct":"選取",
   "Start" :"起點",
   "End":"終點",
   "Dinstance":"距離",
   "Height":"海拔",
+  "Gradients_Angle":"坡度 / 角度",
   "SelectQuery":"全選當前",
   "UnSelectAll":"全不選",
   "DrawInMap":"在地圖上顯示",
@@ -21,6 +22,7 @@
   "ChooseLang":"選擇語言",
   "DrawAllPath":"顯示所有",
   "DrawSelectPath":"顯示所選",
-  "Clear":"清除"
+  "Clear":"清除",
+  "OrInput" : "或是直接輸入KML的內容 ⇙"
 
 }

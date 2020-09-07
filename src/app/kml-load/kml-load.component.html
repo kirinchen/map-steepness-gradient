@@ -1,4 +1,19 @@
-<a class="btn btn-primary" href="javascript:void(0)" (click)="loadText()" role="button">{{'Load'|translate}}</a>
-<!-- <a class="btn btn-primary" href="javascript:void(0)" (click)="testPb()" role="button">Test</a> -->
+
+
+
+
+<div class="container-fluid m-2">
+  <div class="row">
+    <div class="col-sm">
+      <input type="file" (change)="onChange($event.target.files)">
+    </div>
+    <div class="col-sm">
+      {{ 'OrInput' | translate }}
+    </div>
+
+  </div>
+</div>
 
 <textarea class="container-fluid " style="height:800px" id="kml-text" name="kml-text" [(ngModel)]="kmlText"></textarea>
+
+<a class="btn btn-primary container-fluid" href="javascript:void(0)" (click)="loadText()" role="button">{{'Load'|translate}}</a>

@@ -74,7 +74,15 @@ export class KmlLoadComponent implements OnInit {
       ans.push(new LocInfo(ls[1], ls[0]));
     }
     return ans;
+  }
 
+  public onChange(fileList: FileList): void {
+    const file = fileList[0];
+    const fileReader: FileReader = new FileReader();
+    fileReader.onloadend = (x) => {
+      this.kmlText = fileReader.result.toString();
+    };
+    fileReader.readAsText(file);
   }
 
 }

@@ -19,6 +19,7 @@
         <th scope="col">{{ 'End'|translate }}</th>
         <th scope="col">{{ 'Dinstance'|translate }}</th>
         <th scope="col">{{ 'Height'|translate }}</th>
+        <th scope="col">{{ 'Gradients_Angle'|translate }}</th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +30,7 @@
         <td>{{p.end.latitude}} &nbsp; {{p.end.longitude}} H:{{p.end.elevation  | number : '1.2-2'}}</td>
         <td>{{p.distance  | number : '1.2-2' }}</td>
         <td>{{p.getDifHeight()  | number : '1.2-2'}} ( {{ p.getAngleDeg()  | number : '1.2-2' }} )</td>
+        <td>{{ p.getSteepness()  | percent:'1.3-5' }}  /  {{ p.getAngleDeg()  | number : '1.2-2' }} </td>
       </tr>
     </tbody>
   </table>
