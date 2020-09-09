@@ -35,6 +35,7 @@ export class LanguageService {
   }
 
   public getSaveLang(): Lang {
+    console.log(this.translate.getBrowserLang() + ' ' + navigator.language);
     const sl = localStorage.getItem(LanguageService.SAVE_KEY);
     if (StringUtils.isBlank(sl)) {
       const bl = this.findByBroser(this.getBroserLan());
@@ -47,7 +48,8 @@ export class LanguageService {
   }
 
   private getBroserLan(): string {
-    return navigator.language;
+    console.log(this.translate.getBrowserLang() + ' ' + navigator.language);
+    return navigator.language.toLowerCase();
   }
 
 

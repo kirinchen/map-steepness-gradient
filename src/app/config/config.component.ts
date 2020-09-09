@@ -1,3 +1,4 @@
+import { StringUtils } from './../utils/string-utils';
 import { LanguageService } from './../service/language.service';
 import { ToastInfo, ToastService } from './../service/toast.service';
 import { ConfigService } from './../service/config.service';
@@ -39,7 +40,7 @@ export class ConfigComponent implements OnInit {
       msg: 'it`s done',
       title: 'OK'
     });
-    this.config.saveGmapKey(this.gmapApiKey);
+    if (!StringUtils.isBlank(this.gmapApiKey)) { this.config.saveGmapKey(this.gmapApiKey); }
     this.config.savePathMinDist(this.minPathDist);
     this.language.saveLang(this.language.findByVal(this.selLang));
     location.reload();
