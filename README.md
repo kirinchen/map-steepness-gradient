@@ -1,4 +1,3 @@
-
 # Google Map 單車路徑計算坡度和角度小工具
 
 本人最近開始稍微開始認真騎腳踏車,然後我常用google map 去安排路線(癡迷上自己亂排路線的快感 XD)
@@ -22,7 +21,7 @@
 
 ___
 
-# 使用教學
+# 設定教學
 
 1. 一進入網站就會先到設定頁   https://mapsteepness.web.app/config 
 2. 設定基本參數
@@ -38,4 +37,10 @@ ___
 ![map-service-enable.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/map-service-enable.png?raw=true)
 
 > 啟用服務教學 : [教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/gmapkey-zh-tw.md)
-> 為什麼要此金鑰,因為Google這幾年增加圖資的費用,所以很多地圖相關的APP都取消服務,而我們採用各自申請,金鑰來提供此服務,且沒有超過一定的使用量基本上是免費的
+
+> 為什麼要此金鑰,因為Google這幾年增加圖資的費用,所以很多地圖相關的APP都取消服務,而我們採用各自申請金鑰來提供此服務,且沒有超過一定的使用量基本上是免費的
+
+# 操作教學
+
+1
+
