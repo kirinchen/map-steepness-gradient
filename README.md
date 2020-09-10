@@ -44,7 +44,7 @@ ___
 
 1. 匯入KML檔案 ，匯入完後並點擊解析
 -
- - google map 匯出KML教學：
+ - google map 匯出KML教學：https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md
 
  - 範例檔案 ： [點我下載]()
 > [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
