@@ -42,14 +42,21 @@ ___
 
 # 操作教學
 
-1. 匯入KML檔案 ，匯入完後並點擊解析
->google map 匯出[KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
+1. 準備單車路徑的KML檔案
+  1.1 [google map 匯出KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
+  1.2 範例檔案 ： [點我下載]()
+  1.3 [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
 
->範例檔案 ： [點我下載]()
+2. 匯入KML檔案到 mapsteepness 系統中 : [連結](https://mapsteepness.web.app/load)
+![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml.png?raw=true)
+![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml-done.png?raw=true)
+![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/import-done.png?raw=true)
+3. 等匯入完成 就可以點選 路徑列表
 
-> [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
+![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/path-table.png?raw=true) 
 
-2. 選擇要標示的路段
+
+
 
 
 > 可以用上面的過濾器 透過夾角或是坡度來篩選 要的路徑
