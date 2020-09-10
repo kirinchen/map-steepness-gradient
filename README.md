@@ -48,6 +48,7 @@ ___
   1.3 [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
 
 2. 匯入KML檔案到 mapsteepness 系統中 : [連結](https://mapsteepness.web.app/load)
+
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml.png?raw=true)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml-done.png?raw=true)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/import-done.png?raw=true)
