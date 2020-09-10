@@ -30,7 +30,7 @@ ___
 - 設定說明
     - A: 設定語系
     - B: 設定每幾公尺為一個路徑
-    - C :設定 Google Map 金鑰,請看此 **[教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/gmapkey-zh-tw.md)**
+    - C :設定 Google Map 金鑰,請看此 **[教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/gmapkey-zh-tw.md)**
 
 3. Google Map 金鑰要啟用 Directions API / Maps Elevation API / Maps JavaScript API 三個服務
 
