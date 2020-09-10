@@ -43,10 +43,10 @@ ___
 # 操作教學
 
 1. 匯入KML檔案 ，匯入完後並點擊解析
--
- > google map 匯出[KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
+>google map 匯出[KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
 
- - 範例檔案 ： [點我下載]()
+>範例檔案 ： [點我下載]()
+
 > [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
 
 2. 選擇要標示的路段
