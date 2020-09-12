@@ -51,20 +51,25 @@ ___
 
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml.png?raw=true)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml-done.png?raw=true)
-![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/import-done.png?raw=true)
+
 
 
 3. 等匯入完成 就可以點選 路徑列表
 
+![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/import-done.png?raw=true)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/path-table.png?raw=true) 
 
-
+4. 查看此次路徑，的每個路徑分段，並選擇要在地圖上觀察的分段
 
 
 
 > 可以用上面的過濾器 透過夾角或是坡度來篩選 要的路徑
 
-3. 顯示在地圖上
+5. 顯示在地圖上
 
+  5.1 點擊"在地圖顯示"
+圖1
+  5.2 地圖其他功能
+圖2
 
-
+6. 點擊分段起點/終點 圖標 可以觀看訊息，或是打開google map
