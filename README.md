@@ -54,18 +54,18 @@ ___
 
 
 
-3. 等匯入完成 就可以點選 路徑列表
+###  3. 等匯入完成 就可以點選 路徑列表
 
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/import-done.png?raw=true=500x700)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/path-table.png?raw=true) 
 
-4. 查看此次路徑，的每個路徑分段，並選擇要在地圖上觀察的分段
+### 4. 查看此次路徑，的每個路徑分段，並選擇要在地圖上觀察的分段
 
 
 
 > 可以用上面的過濾器 透過夾角或是坡度來篩選 要的路徑
 
-5. 顯示在地圖上
+### 5. 顯示在地圖上
 
   5.1 點擊"在地圖顯示"
 圖1
