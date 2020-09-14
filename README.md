@@ -42,12 +42,12 @@ ___
 
 # 操作教學
 
-1. 準備單車路徑的KML檔案
-  1.1 [google map 匯出KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
-  1.2 範例檔案 ： [點我下載]()
-  1.3 [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
+### 1. 準備單車路徑的KML檔案
+  - [google map 匯出KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
+  - 範例檔案 ： [點我下載]()
+  - KML  [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
 
-2. 匯入KML檔案到 mapsteepness 系統中 : [連結](https://mapsteepness.web.app/load)
+### 2. 匯入KML檔案到 mapsteepness 系統中 : [連結](https://mapsteepness.web.app/load)
 
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml.png?raw=true)
 ![map.jpg](https://github.com/kirinchen/note-annex/blob/master/map-gradient/sel-kml-done.png?raw=true)
