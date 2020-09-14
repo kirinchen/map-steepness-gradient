@@ -44,7 +44,7 @@ ___
 
 ### 1. 準備單車路徑的KML檔案
   - [google map 匯出KML教學](https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md)
-  - 範例檔案 ： [點我下載]()
+  - 範例檔案 ： [點我下載](https://raw.githubusercontent.com/kirinchen/note-annex/master/map-gradient/Path.kml)
   - KML  [Wiki](https://zh.m.wikipedia.org/zh-tw/KML)
 
 ### 2. 匯入KML檔案到 mapsteepness 系統中 : [連結](https://mapsteepness.web.app/load)
@@ -61,15 +61,25 @@ ___
 
 ### 4. 查看此次路徑，的每個路徑分段，並選擇要在地圖上觀察的分段
 
+![ptb](https://github.com/kirinchen/note-annex/blob/master/map-gradient/path-table-view.png?raw=true)
 
-
-> 可以用上面的過濾器 透過夾角或是坡度來篩選 要的路徑
+- 可以用上面的過濾器 透過夾角或是坡度來篩選 要的路徑
+- 起點/終點 : 標示路段起點/終點的經緯度
+- 距離 : 該路段的長度
+- 海拔 : 終點的海拔高度
+- 坡度/夾角 : 該路段的爬升坡度,與夾角
+- 選取 : 選區的路段可以顯示在地圖上
 
 ### 5. 顯示在地圖上
+![mapo](https://github.com/kirinchen/note-annex/blob/master/map-gradient/map-over-all.png?raw=true)
+  5.1 點選其中的一段的路徑
 
-  5.1 點擊"在地圖顯示"
-圖1
-  5.2 地圖其他功能
-圖2
 
-6. 點擊分段起點/終點 圖標 可以觀看訊息，或是打開google map
+點擊地圖標示 起點/終點
+![START](https://github.com/kirinchen/note-annex/blob/master/map-gradient/mark-start.png?raw=true) : 起點 
+![START](https://github.com/kirinchen/note-annex/blob/master/map-gradient/mark-end.png?raw=true) : 終點
+
+![mapcl](https://github.com/kirinchen/note-annex/blob/master/map-gradient/map-click-mark.png?raw=true)
+- 點擊後可以看到 海拔 / 該路段距離/ 坡度 等資訊
+- 點擊 Open Gmap : 開啟該點位在google map
+![oom](https://github.com/kirinchen/note-annex/blob/master/map-gradient/open-in-gmap.png?raw=true)
