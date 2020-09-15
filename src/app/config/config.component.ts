@@ -4,6 +4,8 @@ import { ToastInfo, ToastService } from './../service/toast.service';
 import { ConfigService } from './../service/config.service';
 import { Component, OnInit } from '@angular/core';
 import { GMapRestService } from '../service/gmap-rest.service';
+import { Router } from '@angular/router';
+import { CommUtils } from '../comm-utils';
 
 interface Food {
   value: string;
@@ -26,7 +28,8 @@ export class ConfigComponent implements OnInit {
   constructor(
     private config: ConfigService,
     private toast: ToastService,
-    public language: LanguageService
+    public language: LanguageService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -43,6 +46,8 @@ export class ConfigComponent implements OnInit {
     if (!StringUtils.isBlank(this.gmapApiKey)) { this.config.saveGmapKey(this.gmapApiKey); }
     this.config.savePathMinDist(this.minPathDist);
     this.language.saveLang(this.language.findByVal(this.selLang));
+    this.router.navigate(['load']);
+    await CommUtils.delay(200);
     location.reload();
   }
 

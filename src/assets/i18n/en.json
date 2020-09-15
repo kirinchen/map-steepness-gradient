@@ -27,6 +27,9 @@
   "gradient": "gradient",
   "angle": "angle",
   "notHastConfig": "Not Setting the Google Map Key",
-  "error": "Error",
-  "OpenGmap":"Open In Google Map"
+  "error": "!!!",
+  "OpenGmap":"Open In Google Map",
+  "kmlintrUrl":"https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md",
+  "noKmlData":"you must import the kml data first",
+  "gapikeyUrl":"https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/gmapkey-zh-tw.md"
 }

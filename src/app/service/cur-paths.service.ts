@@ -25,6 +25,10 @@ export class CurPathsService {
     localStorage.setItem(CurPathsService.KEY_LAST_DATA, JSON.stringify(this.pathsInfo));
   }
 
+  public existData(): boolean {
+    return this.pathsInfo.paths.length > 0;
+  }
+
 
 
   private injectGmapInfo(list: LocInfo[]): void {

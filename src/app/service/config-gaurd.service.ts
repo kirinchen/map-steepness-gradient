@@ -1,3 +1,4 @@
+import { CurPathsService } from './cur-paths.service';
 import { LanguageService } from './language.service';
 import { ToastService } from './toast.service';
 import { ConfigService } from './config.service';
@@ -15,7 +16,8 @@ export class ConfigGaurdService implements CanActivate {
     private router: Router,
     private toast: ToastService,
     private language: TranslateService,
-    private config: ConfigService
+    private config: ConfigService,
+    private curPaths: CurPathsService
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
@@ -25,21 +27,32 @@ export class ConfigGaurdService implements CanActivate {
       return false;
     }
 
-    if (this.config.existGmapkey()) {
+
+
+    if (!this.config.existGmapkey()) {
+      this.showAlert('notHastConfig');
+      this.router.navigate(['config']);
+      return false;
+    }
+
+    if ((state.url.startsWith('locs') || state.url.startsWith('map')) && !this.curPaths.existData()) {
+      this.showAlert('noKmlData');
+      this.router.navigate(['load']);
+      return false;
+    }
+
+    if (state.url.startsWith('/config')) {
       return true;
     }
 
 
-    this.showAlert();
-
-    this.router.navigate(['config']);
-    return false;
+    return true;
 
   }
 
-  private async showAlert(): Promise<void> {
+  private async showAlert(i18nKey: string): Promise<void> {
     const er = await this.language.get('error').toPromise();
-    const nocc = await this.language.get('notHastConfig').toPromise();
+    const nocc = await this.language.get(i18nKey).toPromise();
     this.toast.twinkle({
       title: er,
       msg: nocc,

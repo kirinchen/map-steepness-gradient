@@ -27,6 +27,9 @@
   "gradient": "坡度",
   "angle": "夾角",
   "notHastConfig": "沒有設定google金鑰",
-  "error":"錯誤",
-  "OpenGmap":"顯示在Google地圖"
+  "error":"!!!",
+  "OpenGmap":"顯示在Google地圖",
+  "kmlintrUrl":"https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/mymap-export-kml.md",
+  "noKmlData":"請你先匯入KML路徑資料",
+  "gapikeyUrl":"https://github.com/kirinchen/map-steepness-gradient/blob/master/doc/gmapkey-zh-tw.md"
 }

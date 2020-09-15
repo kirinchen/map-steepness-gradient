@@ -40,10 +40,11 @@ export class KmlLoadComponent implements OnInit {
     });
     localStorage.setItem(KmlLoadComponent.KEY_LAST_DATA, this.kmlText);
     this.progressDialog.dismiss();
-    this.toast.twinkle({
+    await this.toast.twinkle({
       msg: 'OK',
       title: 'done'
     });
+    this.router.navigate(['locs']);
   }
 
   public async testPb(): Promise<void> {

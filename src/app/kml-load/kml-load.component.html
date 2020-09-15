@@ -8,7 +8,16 @@
       <input type="file" (change)="onChange($event.target.files)">
     </div>
     <div class="col-sm">
-      {{ 'OrInput' | translate }}
+
+      <div class="input-group mb-3">
+        <span type="text" class="form-control">  {{ 'OrInput' | translate }}</span>
+        <div class="input-group-append">
+          <a target="_blank" [href]=" 'kmlintrUrl' | translate " class="input-group-text" id="basic-addon2">?</a>
+        </div>
+      </div>
+
+
+
     </div>
 
   </div>
