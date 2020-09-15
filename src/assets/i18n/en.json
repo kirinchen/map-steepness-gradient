@@ -27,5 +27,6 @@
   "gradient": "gradient",
   "angle": "angle",
   "notHastConfig": "Not Setting the Google Map Key",
-  "error": "Error"
+  "error": "Error",
+  "OpenGmap":"Open In Google Map"
 }

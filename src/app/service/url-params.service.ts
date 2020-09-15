@@ -38,7 +38,7 @@ export class UrlParamsService {
   }
 
   public eqPath(p: string): boolean {
-    return this.path === p;
+    return this.path.startsWith( p);
   }
 
   public getGitToken(): string {

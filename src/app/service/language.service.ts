@@ -30,6 +30,10 @@ export class LanguageService {
     return this.langs.find(l => l.value === v);
   }
 
+  public getI18n(k: string): Promise<string> {
+    return this.translate.get(k).toPromise();
+  }
+
   private findByBroser(b: string): Lang {
     return this.langs.find(l => l.browserKeys.includes(b));
   }

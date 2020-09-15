@@ -1,3 +1,4 @@
+import { LanguageService } from './../service/language.service';
 import { PathMapRen, MarkerBd } from './../utils/path-map-ren';
 import { CurPathsService } from './../service/cur-paths.service';
 import { CommUtils } from './../comm-utils';
@@ -25,14 +26,15 @@ export class MapComponent implements OnInit {
 
   constructor(
     private curPaths: CurPathsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private language: LanguageService
   ) { }
 
   async ngOnInit(): Promise<void> {
-    await CommUtils.delay(1000);
+    await CommUtils.delay(500);
     this.map = await new google.maps.Map(document.getElementById('map'), {
       center: { lat: -34.397, lng: 150.644 },
-      zoom: 8
+      zoom: 15
     });
 
     const act = this.route.snapshot.paramMap.get('act');
@@ -81,7 +83,7 @@ export class MapComponent implements OnInit {
 
   private drawPaths(ps: Array<Path>): void {
     this.clear();
-    this.markers = PathMapRen.build().setPaths(ps).draw(this.map);
+    this.markers = PathMapRen.build(this.language).setPaths(ps).draw(this.map);
   }
 
   public drawTest(): void {
