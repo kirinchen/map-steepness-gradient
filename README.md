@@ -87,9 +87,7 @@ ___
 
 # 建置專案
 
-此專案是透過 angular 開發，所以請先準備angular的開發環境
-
-[angular官網](https://angular.io/)
+此專案是透過 angular 開發，所以請先準備angular的開發環境[angular官網](https://angular.io/)
 
 1. 
  ```
