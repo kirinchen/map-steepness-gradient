@@ -83,3 +83,27 @@ ___
 - 點擊後可以看到 海拔 / 該路段距離/ 坡度 等資訊
 - 點擊 Open Gmap : 開啟該點位在google map
 ![oom](https://github.com/kirinchen/note-annex/blob/master/map-gradient/open-in-gmap.png?raw=true)
+
+
+# 建置專案
+
+此專案是透過 angular 開發，所以請先準備angular的開發環境
+
+[angular官網](https://angular.io/)
+
+1. 
+ ```
+git clone https://github.com/kirinchen/map-steepness-gradient.git
+```
+2. 
+```
+cd map-steepness-gradient.git
+```
+3.
+```
+ng serve
+```
+4. open browser http://localhost:4200
+
+
+enjoy!
